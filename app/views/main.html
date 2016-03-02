@@ -1,0 +1,85 @@
+<div layout="column" ng-cloak class="deckbuilder">
+  <section layout="row" flex class='noselect'>
+    <md-content flex layout-padding>
+      
+      <md-input-container>
+        <label>Search</label>
+        <input ng-model="main.searchText" />
+      </md-input-container>
+      
+      <md-grid-list
+        md-cols-xs="6" md-cols-sm="6" md-cols-md="6" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="1:1"
+        md-gutter="12px" md-gutter-gt-sm="8px">
+
+        <md-grid-tile class="gray" md-rowspan="2" md-colspan="2" md-colspan-sm="1"
+          ng-repeat="card in main.cards.cards | orderBy: ['color', 'faeriaCost', 'name'] | filter:main.searchText"
+          class="card-selectable"
+          ng-click="main.add(card)"
+          ng-if="!card.uncollectable">
+
+          <img alt="{{ card.name }}" ng-src="/images/illustrations/{{ main.pad(card.id) }}.jpg" style="max-width: 100%; position: absolute; top: 0; left: 0;" />
+          <div>
+            <p class="type">{{card.type}}</p>
+                
+            <div class="icon-container" style="z-index:1; position: absolute; right: 0; top: 1em;">
+              <p class="faeriacost">{{card.faeriaCost}}</p>
+              <br />
+              <p class="attack" ng-if="card.attack">{{card.attack}}</p>
+              <br />
+              <p class="health" ng-if="card.health">{{card.health}}</p>
+            </div>
+
+
+            <div class="elements-container" style="z-index:1; position: absolute; left: 0; top: 1em;">
+              <p class="blue" ng-if="card.islands">{{card.islands}}</p>
+              <p class="green" ng-if="card.forests">{{card.forests}}</p>
+              <p class="red" ng-if="card.mountains">{{card.mountains}}</p>
+              <p class="yellow" ng-if="card.deserts">{{card.deserts}}</p>
+            </div>
+
+            <div class="rarity {{card.rarity}}"></div>
+          </div>
+          <p class="txt" ng-bind-html="card.text" ng-show="card.text"></p>
+          <md-grid-tile-footer>
+            <h3>{{ card.name }}</h3>
+          </md-grid-tile-footer>
+
+        </md-grid-tile>
+
+      </md-grid-list>
+
+    </md-content>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" md-is-locked-open="true">
+      <md-list>
+        
+        <md-subheader class="md-no-sticky">
+          <md-input-container>
+            <label>Deck Name</label>
+            <input ng-model="main.deckName" ng-change="main.deckChange()">
+          </md-input-container>
+          <strong class="count">{{main.totalCards}}</strong>
+        </md-subheader>
+        <md-button class="md-raised md-primary" ng-click="main.save();" ng-disabled="!main.deck.length">
+          Save
+        </md-button>
+      
+        <md-button class="md-raised" ng-click="main.reset()">
+          Reset
+        </md-button>
+
+        <a href="http://www.faeriadecks.com/{{main.deckUrl}}" ng-show="main.deckUrl">faeriadecks.com/{{main.deckUrl}}</a>
+        <p class="error" ng-show="main.error">
+          {{main.error}}
+        </p>
+        <md-list-item ng-repeat="card in main.deck track by $index"
+            ng-click="main.remove(card)"
+            style="background-image: url('/images/illustrations/{{ main.pad(card.id) }}.jpg');"
+            class="list-card">
+
+          <p>{{ card.name }}</p> x{{ card.copies }}
+        </md-list-item>
+      </md-list>
+    </md-sidenav>
+  </section>
+</div>

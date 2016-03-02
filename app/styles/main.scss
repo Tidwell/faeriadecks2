@@ -1,0 +1,176 @@
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+md-content, md-sidenav {
+	background: #fff;
+	background-color: #fff;
+}
+.deckbuilder {
+  height: 100%;
+}
+.hidden {
+  display: none;
+}
+
+.icon-container {
+	line-height: 5em;
+}
+.faeriacost,
+.attack,
+.health,
+.blue,
+.green,
+.red,
+.yellow {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	font-size: 2em;
+	text-align: center;
+	background-size: cover;
+}
+
+.blue,
+.green,
+.red,
+.yellow {
+	display: block;
+}
+
+.faeriacost {
+	background-image: url('/images/icons/card_cost_faeria.png');
+}
+.attack {
+	background-image: url('/images/icons/card_power_bg.png');
+	height: 2.6em;
+	line-height: 3.5em;
+}
+.health {
+	background-image: url('/images/icons/card_life_bg.png');
+	height: 2.2em;
+}
+.blue {
+	background-image: url('/images/layout/card_cost_blue_hd.png');
+	color: rgb(125,255,255);
+}
+.green {
+	background-image: url('/images/layout/card_cost_green_hd.png');
+	color: rgb(165,230,75);
+}
+.red {
+	background-image: url('/images/layout/card_cost_red_hd.png');
+	color: rgb(240,100,75);
+}
+.yellow {
+	background-image: url('/images/layout/card_cost_yellow_hd.png');
+	color: rgb(245,100,100);
+}
+
+.list-card {
+	background-size: cover;
+	background-position-y: 30%;
+	border-top: 2px solid #3d3d3d;
+}
+.list-card:last-child {
+	border-bottom: 2px solid #3d3d3d;
+}
+.list-card div, .list-card p {
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px 4px #3d3d3d;
+}
+
+md-grid-list md-grid-tile {
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity linear .25s;
+}
+md-grid-list md-grid-tile.ng-leave,
+md-grid-list md-grid-tile.ng-enter {
+	opacity: 0;
+}
+md-grid-list md-grid-tile md-grid-tile-footer h3 {
+	font-weight: bold;
+	text-shadow: 0 0 5px #000;
+}
+
+.rarity {
+	width: 3em;
+	height: 3em;
+	background-size: cover;
+	position: absolute;
+	bottom: 0em;
+	right: 1em;
+	display: block;
+	z-index: 10;
+}
+.COMMON {
+	background-image: url('/images/layout/card_rarity_common.png');
+}
+.EXCEPTIONAL {
+	background-image: url('/images/layout/card_rarity_exceptional.png');
+}
+.RARE {
+	background-image: url('/images/layout/card_rarity_rare.png');
+}
+.LEGENDARY {
+	background-image: url('/images/layout/card_rarity_legendary.png');
+}
+.txt {
+	position: absolute;
+	z-index: 10;
+	color: white;
+
+	align-items: center;
+    background: rgba(0,0,0,.5);
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+    width: 100%;
+    padding: 16px;
+    font-weight: 400;
+    text-shadow: 0 0 5px #3d3d3d;
+}
+
+.txt strong {
+	font-weight: 600;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.md-subheader-content strong {
+    display: block;
+    font-size: 4em;
+    float: right;
+}
+
+.type {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: right;
+	padding-right: 5em;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0 0 5px #3d3d3d;
+}
+md-input-container {
+	margin-bottom: 0;
+}
+
+.error {
+	color: rgb(255,0,0);
+	padding: .5em;
+}
