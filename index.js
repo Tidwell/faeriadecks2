@@ -5,6 +5,10 @@ var express = require('express'); // call express
 var app = express(); // define our app using express
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var modRewrite = require('connect-modrewrite');
+
+var path = require('path');
+app.use(express.static(path.join(__dirname , './dist')));
 
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://localhost/faeriadecks2'); // connect to our database
@@ -46,6 +50,8 @@ router.post('/decks', function(req, res) {
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
+
+app.use(modRewrite(['^[^\\.]*$ /index.html [L]']));
 // START THE SERVER
 // =============================================================================
 app.listen(port);

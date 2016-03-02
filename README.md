@@ -17,7 +17,14 @@ faeriadecks.com - version 2
 
 ##Deploy
 
+`git subtree push --prefix build origin build`
+
+ssh to box and cd to folder
+
 `npm install`
+
+
+
 
 TODO;
 

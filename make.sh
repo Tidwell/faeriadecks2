@@ -1,6 +1,7 @@
 #!/bin/bash
 
-mkdir build;
+rm -r build/*;
+
 cp -r dist build;
 cp index.js build;
 cp deck-model.js build;
