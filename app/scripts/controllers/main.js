@@ -17,6 +17,30 @@ angular.module('faeriadecks2App')
 		vm.deckName = '';
 		vm.deckUrl = '';
 
+		vm.averageStat = function(stat, type) {
+			var amnt = 0;
+			var cards = 0;
+			vm.deck.forEach(function(c){
+				if (!type || c.type === type) {
+					amnt += c[stat] * c.copies;
+					cards += c.copies;
+				}
+			});
+			if (isNaN(amnt) || isNaN(cards) || !amnt || !cards) { return 0; }
+			return Math.floor((amnt/cards)*100)/100;
+		};
+
+		vm.countStatValue = function(stat, value) {
+			var cards = 0;
+			vm.deck.forEach(function(c){
+				if (!value || c[stat] === value) {
+					cards += c.copies;
+				}
+			});
+			if (isNaN(cards)) { return 0; }
+			return cards;
+		};
+
 		function getDeckCard(id) {
 			var toRet;
 			vm.deck.forEach(function(c) {
@@ -46,14 +70,12 @@ angular.module('faeriadecks2App')
 				vm.totalCards++;
 				return;
 			}
-
-			vm.deck.push({
-				id: card.id,
-				name: card.name,
-				img: card.img,
-				rarity: card.rarity,
-				copies: 1
-			});
+			var deckCard = {};
+			for (var prop in card) {
+				deckCard[prop] = card[prop];
+			}
+			deckCard.copies = 1;
+			vm.deck.push(deckCard);
 			vm.totalCards++;
 		};
 		vm.remove = function(card) {

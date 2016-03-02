@@ -174,3 +174,18 @@ md-input-container {
 	color: rgb(255,0,0);
 	padding: .5em;
 }
+
+@media (max-width: 600px) {
+	.main-content {
+		display: none;
+	}
+	md-sidenav.md-locked-open.md-closed.md-sidenav-right.decklist {
+	    width: 98%;
+	    position: relative;
+	    left: 0;
+	    top: 0;
+	    display: block;
+	    max-width: 98%;
+	    margin: 0 1%;
+	}
+}

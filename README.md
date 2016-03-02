@@ -8,7 +8,7 @@ faeriadecks.com - version 2
 `grunt serve`
 
 
-Build
+##Build
 
 `grunt build`
 
