@@ -1,11 +1,11 @@
-var port = process.env.PORT || 8080; // set our port
+var port = process.env.PORT || 9005; // set our port
 
 // call the packages we need
 var express = require('express'); // call express
 var app = express(); // define our app using express
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var modRewrite = require('connect-modrewrite');
+var spa = require('express-spa');
 
 var path = require('path');
 app.use(express.static(path.join(__dirname , './dist')));
@@ -13,6 +13,8 @@ app.use(express.static(path.join(__dirname , './dist')));
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://localhost/faeriadecks2'); // connect to our database
 var Deck = require('./deck-model');
+
+app.use(spa(__dirname + '/dist/index.html'));
 
 app.use(cors());
 // configure app to use bodyParser()
@@ -50,8 +52,6 @@ router.post('/decks', function(req, res) {
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
-
-app.use(modRewrite(['^[^\\.]*$ /index.html [L]']));
 // START THE SERVER
 // =============================================================================
 app.listen(port);

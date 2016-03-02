@@ -9,7 +9,7 @@
  */
 angular.module('faeriadecks2App')
 	.service('Deck', function Deck($resource) {
-		var DeckResource = $resource('http://localhost:8080/api/decks/:deckId', {
+		var DeckResource = $resource('/api/decks/:deckId', {
 			deckId: '@id'
 		});
 

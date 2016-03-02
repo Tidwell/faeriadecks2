@@ -23,10 +23,10 @@ ssh to box and cd to folder
 
 `npm install`
 
+Look for the process on port 9005 using: netstat -tulpn
 
+kill #PID
 
+nohup npm start &
 
-TODO;
-
-Add google analytics
-remove save/reset/and interaction on small device
+sudo service apache2 restart

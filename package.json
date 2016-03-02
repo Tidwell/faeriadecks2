@@ -5,6 +5,7 @@
     "body-parser": "^1.15.0",
     "cors": "^2.7.1",
     "express": "^4.13.4",
+    "express-spa": "0.0.2",
     "faeria-cards": "git+https://github.com/Tidwell/faeria-cards.git",
     "mongoose": "^4.4.5",
     "shortid": "^2.2.4"
@@ -49,6 +50,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "start": "node index.js"
   }
 }
