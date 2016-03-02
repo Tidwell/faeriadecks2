@@ -175,6 +175,13 @@ md-input-container {
 	padding: .5em;
 }
 
+.card-img {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 @media (max-width: 600px) {
 	.main-content {
 		display: none;

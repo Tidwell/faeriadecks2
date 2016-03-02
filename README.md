@@ -12,3 +12,14 @@ faeriadecks.com - version 2
 
 `grunt build`
 
+`./make.sh`
+
+
+##Deploy
+
+`npm install`
+
+TODO;
+
+Add google analytics
+remove save/reset/and interaction on small device

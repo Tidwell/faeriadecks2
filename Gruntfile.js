@@ -211,7 +211,6 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -276,7 +275,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
+          src: '{,*/**/}*.{png,jpg,jpeg,gif}',
           dest: '<%= yeoman.dist %>/images'
         }],
         options: {
@@ -284,6 +283,19 @@ module.exports = function (grunt) {
         }
       }
     },
+
+
+    image_resize: {
+      resize: {
+        options: {
+          width: 200,
+          height: 200
+        },
+        src: '<%= yeoman.dist %>/images/illustrations/*.jpg',
+        dest: '<%= yeoman.dist %>/images/illustrations/'
+      }
+    },
+
 
     svgmin: {
       dist: {
@@ -374,6 +386,12 @@ module.exports = function (grunt) {
         cwd: './node_modules/faeria-cards/build',
         dest: './app/scripts',
         src: '*.json'
+      },
+      distcards: {
+        expand: true,
+        cwd: './node_modules/faeria-cards/build',
+        dest: './dist/scripts',
+        src: '*.json'
       }
     },
 
@@ -439,14 +457,15 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'ngmin',
-    'copy:cards',
     'copy:dist',
+    'copy:distcards',
     'cdnify',
     'cssmin',
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'image_resize'
   ]);
 
   grunt.registerTask('default', [
