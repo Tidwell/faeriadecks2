@@ -59,6 +59,19 @@ angular.module('faeriadecks2App')
 			return cards;
 		};
 
+		vm.highestStat = function(stat) {
+			var highest = 0;
+			vm.deck.forEach(function(c) {
+				if (c[stat] > highest) {
+					highest = c[stat];
+				}
+			});
+			if (isNaN(highest)) {
+				return 0;
+			}
+			return highest;	
+		}
+
 		function getDeckCard(id) {
 			var toRet;
 			vm.deck.forEach(function(c) {
