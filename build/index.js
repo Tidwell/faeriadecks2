@@ -8,13 +8,13 @@ var cors = require('cors');
 var spa = require('express-spa');
 
 var path = require('path');
-app.use(express.static(path.join(__dirname , './dist')));
+app.use(express.static(path.join(__dirname , './public')));
 
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://localhost/faeriadecks2'); // connect to our database
 var Deck = require('./deck-model');
 
-app.use(spa(__dirname + '/dist/index.html'));
+app.use(spa(__dirname + '/public/index.html'));
 
 app.use(cors());
 // configure app to use bodyParser()
