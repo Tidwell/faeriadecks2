@@ -6,8 +6,17 @@ md-content, md-sidenav {
 	background: #fff;
 	background-color: #fff;
 }
+.decklisting {
+	height: 100%
+}
 .deckbuilder {
   height: 100%;
+}
+.deckbuilder md-fab-toolbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%
 }
 .hidden {
   display: none;
@@ -195,4 +204,10 @@ md-input-container {
 	    max-width: 98%;
 	    margin: 0 1%;
 	}
+}
+
+.decklisting a {
+}
+.decklisting p span.color {
+	float: left;
 }

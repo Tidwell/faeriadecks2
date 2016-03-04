@@ -69,8 +69,8 @@ angular.module('faeriadecks2App')
 			if (isNaN(highest)) {
 				return 0;
 			}
-			return highest;	
-		}
+			return highest;
+		};
 
 		function getDeckCard(id) {
 			var toRet;

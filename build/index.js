@@ -14,8 +14,6 @@ var mongoose   = require('mongoose');
 mongoose.connect('mongodb://localhost/faeriadecks2'); // connect to our database
 var Deck = require('./deck-model');
 
-app.use(spa(__dirname + '/public/index.html'));
-
 app.use(cors());
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -46,11 +44,22 @@ router.post('/decks', function(req, res) {
 	});
 });
 
+router.get('/decks', function(req, res) {
+	var q = Deck.find({}, {}, { sort: { 'created' : -1 } })
+	q.limit(20).exec(function(err,decks){
+		if (err) { return res.sendStatus(400).send(err); }
+		return res.json(decks);
+	});
+});
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
+
+app.use(spa(__dirname + '/public/index.html'));
+
 
 // START THE SERVER
 // =============================================================================

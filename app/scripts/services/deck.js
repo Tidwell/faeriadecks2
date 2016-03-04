@@ -11,6 +11,8 @@ angular.module('faeriadecks2App')
 	.service('Deck', function Deck($resource) {
 		var DeckResource = $resource('/api/decks/:deckId', {
 			deckId: '@id'
+		}, {
+			list: { method: 'GET', isArray: true }
 		});
 
 		return DeckResource;

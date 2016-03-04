@@ -10,7 +10,11 @@ var DeckSchema = new Schema({
 		unique: true,
 		'default': shortid.generate
 	},
-	deck: []
+	deck: [],
+	created: {
+		type: Date,
+		'default': Date.now
+	}
 });
 
 

@@ -18,6 +18,11 @@ angular
   ])
   .config(function($routeProvider, $locationProvider) {
     $routeProvider
+      .when('/decks/browse', {
+        templateUrl: 'views/decks.html',
+        controller: 'DecksCtrl',
+        controllerAs: 'decks'
+      })
       .when('/:deckId', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
