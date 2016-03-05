@@ -279,7 +279,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/images'
         }],
         options: {
-          optimizationLevel: 3
+          optimizationLevel: 2
         }
       }
     },
@@ -287,16 +287,16 @@ module.exports = function (grunt) {
     image_resize: {
       resize: {
         options: {
-          width: 200,
-          height: 200
+          width: 300,
+          height: 300
         },
         src: '<%= yeoman.dist %>/images/card-renders/*.{png,jpg}',
         dest: '<%= yeoman.dist %>/images/card-renders/'
       },
       resizeIllustrations: {
         options: {
-          width: 200,
-          height: 200
+          width: 300,
+          height: 300
         },
         src: '<%= yeoman.dist %>/images/illustrations/*.{png,jpg}',
         dest: '<%= yeoman.dist %>/images/illustrations/'
