@@ -284,14 +284,21 @@ module.exports = function (grunt) {
       }
     },
 
-
     image_resize: {
       resize: {
         options: {
           width: 200,
           height: 200
         },
-        src: '<%= yeoman.dist %>/images/illustrations/*.jpg',
+        src: '<%= yeoman.dist %>/images/card-renders/*.{png,jpg}',
+        dest: '<%= yeoman.dist %>/images/card-renders/'
+      },
+      resizeIllustrations: {
+        options: {
+          width: 200,
+          height: 200
+        },
+        src: '<%= yeoman.dist %>/images/illustrations/*.{png,jpg}',
         dest: '<%= yeoman.dist %>/images/illustrations/'
       }
     },

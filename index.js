@@ -46,7 +46,7 @@ router.post('/decks', function(req, res) {
 
 router.get('/decks', function(req, res) {
 	var q = Deck.find({}, {}, { sort: { 'created' : -1 } })
-	q.limit(20).exec(function(err,decks){
+	q.limit(500).exec(function(err,decks){
 		if (err) { return res.sendStatus(400).send(err); }
 		return res.json(decks);
 	});
