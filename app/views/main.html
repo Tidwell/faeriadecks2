@@ -59,7 +59,7 @@
           Structures
         </md-checkbox>
       </section>
-      
+
       <md-grid-list
         md-cols-xs="1" md-cols-sm="3" md-cols-md="4" md-cols-gt-md="4"
         md-row-height-gt-md="1:1" md-row-height="1:1" md-row-height-lt-md="1:1"
@@ -74,7 +74,7 @@
           <img alt="{{ card.name }}" ng-src="/images/card-renders/{{ main.pad(card.id) }}.png" class="card-img" />
           <div>
             <!-- <p class="type">{{card.type}}</p> -->
-                
+
             <!-- <div class="icon-container" style="z-index:1; position: absolute; right: 0; top: 1em;">
               <p class="faeriacost">{{card.faeriaCost}}</p>
               <br />
@@ -114,7 +114,7 @@
       <md-button class="md-raised md-primary" ng-click="main.save();" ng-disabled="!main.deck.length">
         Save
       </md-button>
-    
+
       <md-button class="md-raised" ng-click="main.reset()">
         Reset
       </md-button>
@@ -131,13 +131,17 @@
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="Cards">
           <md-content class="md-padding">
-            <md-list>     
+            <md-list>
                <md-list-item ng-repeat="card in main.deck track by $index"
                   ng-click="main.remove(card)"
                   style="background-image: url('/images/illustrations/{{ main.pad(card.id) }}.jpg');"
                   class="list-card">
 
                 <p>{{ card.name }}</p> x{{ card.copies }}
+
+                <md-tooltip md-direction="left" md-delay="50" class="deck-card-tooltip">
+                  <img alt="{{ card.name }}" ng-src="/images/card-renders/{{ main.pad(card.id) }}.png" class="card-img"  />
+                </md-tooltip>
               </md-list-item>
             </md-list>
           </md-content>
@@ -151,7 +155,7 @@
               <label>Structures</label>
               <p>{{main.countStatValue('type', 'structure')}}</p>
               <hr />
-              
+
               <label>Average Card Faeria Cost</label>
               <p>{{main.averageStat('faeriaCost')}}</p>
 
@@ -161,9 +165,9 @@
               <p>{{main.averageStat('faeriaCost', 'type', 'event')}}</p>
               <label>Average Structure Faeria Cost</label>
               <p>{{main.averageStat('faeriaCost', 'type', 'structure')}}</p>
-              
+
               <hr />
-              
+
               <label>Average Creature Attack</label>
               <p>{{main.averageStat('attack', 'type', 'creature')}}</p>
               <label>Average Creature Health</label>
@@ -194,7 +198,7 @@
               <p>{{main.averageStat('forests', 'color', 'GREEN')}}</p>
           </md-content>
         </md-tab>
-      </md-tabs>      
+      </md-tabs>
     </md-sidenav>
   </section>
 </div>
