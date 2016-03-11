@@ -112,7 +112,28 @@ angular.module('faeriadecks2App')
 			var deckCard = Object.create(card);
 			deckCard.copies = 1;
 
-			vm.deck.push(deckCard);
+
+      // use insert sort to add card at correct position
+      // cards are sorted by faeria cost > name
+
+      var deck = [];
+
+      var added = false;
+      vm.deck.forEach(function(card) {
+        if (!added && (card.faeriaCost > deckCard.faeriaCost  || card.faeriaCost === deckCard.faeriaCost && card.name > deckCard.name)) {
+          deck.push(deckCard);
+          added = true;
+        }
+
+        deck.push(card);
+      });
+
+      if (!added) {
+        deck.push(deckCard);
+      }
+
+      vm.deck = deck;
+
 			vm.totalCards++;
 		};
 		vm.remove = function(card) {
