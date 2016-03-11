@@ -107,11 +107,11 @@ angular.module('faeriadecks2App')
 				vm.totalCards++;
 				return;
 			}
-			var deckCard = {};
-			for (var prop in card) {
-				deckCard[prop] = card[prop];
-			}
+
+      // create clean copy
+			var deckCard = Object.create(card);
 			deckCard.copies = 1;
+
 			vm.deck.push(deckCard);
 			vm.totalCards++;
 		};
