@@ -31,7 +31,8 @@ md-content, md-sidenav {
 .blue,
 .green,
 .red,
-.yellow {
+.yellow,
+.human {
 	display: inline-block;
 	width: 2em;
 	height: 2em;
@@ -44,7 +45,8 @@ md-content, md-sidenav {
 .blue,
 .green,
 .red,
-.yellow {
+.yellow,
+.human {
 	display: block;
 }
 
@@ -75,6 +77,9 @@ md-content, md-sidenav {
 .yellow {
 	background-image: url('/images/layout/card_cost_yellow_hd.png');
 	color: rgb(245,100,100);
+}
+.human {
+
 }
 
 .list-card {

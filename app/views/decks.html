@@ -6,7 +6,7 @@
         <md-tab label="Top">
           <md-content class="md-padding">
             <div>
-		      <md-card ng-repeat="deck in decks.topDecks track by $index" ng-show="decks.deckCardCount(deck) == 30">
+		      <md-card ng-repeat="deck in decks.topDecks track by $index" ng-show="decks.deckCardCount(deck) == 30 && deck.name">
 		        <md-card-title>
 		          <md-card-title-text>
 		            <span class="md-headline">
@@ -33,7 +33,9 @@
 		            <span class="md-headline">
 		            	<a href="/{{deck.url}}">{{ deck.name || 'Untitled Deck'}}</a>
 		            </span>
-		            <span class="md-subhead">{{decks.deckCardCount(deck)}}</span>
+		            <span class="md-subhead">
+		            	<star-rating ng-model="deck.rating.average" is-readonly="true"></star-rating>
+		            </span>
 		          </md-card-title-text>
 		        </md-card-title>
 		        <md-card-actions layout="row" layout-align="end center">
