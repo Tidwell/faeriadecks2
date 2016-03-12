@@ -14,7 +14,8 @@ angular
     'ngMaterial',
     'ngSanitize',
     'ngAnimate',
-    'ngResource'
+    'ngResource',
+    'ngCookies'
   ])
   .config(function($routeProvider, $locationProvider) {
     $routeProvider

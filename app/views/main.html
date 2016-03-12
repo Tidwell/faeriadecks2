@@ -128,6 +128,13 @@
         {{main.error}}
       </p>
 
+      <star-rating
+        ng-model="main.deckRating"
+        is-readonly="main.hasRated"
+        on-rating-select="main.submitRating(rating)"
+        ng-show="main.deckUrl">
+      </star-rating>
+      <strong style="text-align: center">{{main.deckRating}}</strong>
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="Cards">
           <md-content class="md-padding">

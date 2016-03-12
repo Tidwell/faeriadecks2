@@ -9,10 +9,14 @@
  */
 angular.module('faeriadecks2App')
 	.service('Deck', function Deck($resource) {
-		var DeckResource = $resource('/api/decks/:deckId', {
-			deckId: '@id'
+		var prefix = ''; //http://localhost:9005'
+		var DeckResource = $resource(prefix + '/api/decks/:deckId', {
+			deckId: '@id',
+			rating: '@rating'
 		}, {
-			list: { method: 'GET', isArray: true }
+			list: { method: 'GET', isArray: true },
+			topList: { method: 'GET', isArray: true, url: prefix + '/api/decks/top' },
+			rate: { method: 'POST', url: prefix + '/api/decks/:deckId/rate/:rating' }
 		});
 
 		return DeckResource;

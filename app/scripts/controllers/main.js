@@ -8,9 +8,10 @@
  * Controller of the faeriadecks2App
  */
 angular.module('faeriadecks2App')
-	.controller('MainCtrl', function(Cards, Deck, $routeParams, $location) {
+	.controller('MainCtrl', function(Cards, Deck, $routeParams, $location, $cookies) {
 		var vm = this;
 
+		vm.hasRated = false;
 		vm.cards = Cards.get();
 		vm.deck = [];
 		vm.totalCards = 0;
@@ -151,11 +152,15 @@ angular.module('faeriadecks2App')
 				vm.deckName = deck.name;
 				vm.deckUrl = deck.url;
 				vm.deck = deck.deck;
+				vm.deckRating = deck.rating.average;
 				var count = 0;
 				vm.deck.forEach(function(card) {
 					count += card.copies;
 				});
 				vm.totalCards = count;
+
+				if ($cookies.get(vm.deckUrl)) { vm. hasRated = true; }
+				//check cookie on load if rated
 			}, function() {
 				vm.error = 'Deck could not be found.';
 			});
@@ -180,6 +185,16 @@ angular.module('faeriadecks2App')
 			vm.totalCards = 0;
 			vm.deckName = '';
 			vm.deckUrl = '';
+		};
+
+		vm.submitRating = function(rate) {
+			vm.hasRated = true;
+			Deck.rate({
+				rating: rate,
+				id: vm.deckUrl
+			}).$promise.then(function(){
+				$cookies.put(vm.deckUrl, rate);
+			});
 		};
 	});
 
