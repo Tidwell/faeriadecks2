@@ -26,6 +26,28 @@ app.use(bodyParser.json());
 // =============================================================================
 var router = express.Router(); // get an instance of the express Router
 
+
+router.get('/decks/top', function(req, res) {
+	var q = Deck.find({}, {}, { sort: { 'rating.average' : -1, 'created' : -1 } })
+	q.limit(500).exec(function(err,decks){
+		if (err) { return res.sendStatus(400).send(err); }
+		return res.json(decks);
+	});
+});
+
+router.post('/decks/:url/rate/:rating', function(req,res){
+	if (!req.params.url || !req.params.rating) { return res.sendStatus(400); }
+
+	Deck.findOne({url: req.params.url}, function(err,deck){
+		if (err || !deck) { return res.sendStatus(404); }
+		deck.addRating(Number(req.params.rating));
+		deck.save(function(err,deck){
+			if (err || !deck) { return res.sendStatus(404); }
+			res.json(deck);
+		});
+	});
+});
+
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/decks/:url', function(req, res) {
 	Deck.findOne({url: req.params.url}, function(err,deck){
