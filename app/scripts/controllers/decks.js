@@ -16,13 +16,14 @@ angular.module('faeriadecks2App')
 
 		this.getById = function(cardId) {
 			var toRet;
+			if (!this.cards || !this.cards.cards) { return {}; }
 			this.cards.cards.forEach(function(c){
 				if (c.id === cardId) {
 					toRet = c;
 				}
 			});
 			return toRet;
-		}
+		};
 
 		this.getColors = function(deck) {
 			if (!deck || !deck.deck) { return []; }
@@ -34,7 +35,7 @@ angular.module('faeriadecks2App')
 				}
 			});
 			return colors;
-		}
+		};
 
 		this.deckCardCount = function(deck) {
 			var total = 0;

@@ -29,6 +29,7 @@ angular.module('faeriadecks2App')
 				return c;
 			},
 			getById: function(id) {
+				if (!c.cards) { return {}; }
 				var toRet;
 				c.cards.forEach(function(card){
 					if (card.id === id) { toRet = card; }
