@@ -20,10 +20,46 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/star-rating.css">
+    <link rel="stylesheet" href="styles/homepage.css">
     <!-- endbuild -->
 </head>
 <body ng-app="faeriadecks2App" ng-cloak>
 
+  <md-fab-toolbar md-direction="left" md-open="true">
+    <md-fab-trigger class="align-with-text">
+      <md-button aria-label="menu" class="md-fab md-primary">
+        <md-icon><i class="fa fa-bars fa-2x"></i></md-icon>
+      </md-button>
+    </md-fab-trigger>
+    <md-toolbar>
+      <md-fab-actions class="md-toolbar-tools">
+        <a hide-xs>
+          <md-button aria-label="home" class="md-button">
+            <img src="/images/logo.png" style="height: 100%"/>
+          </md-button>
+        </a>
+
+        
+          <md-button aria-label="Builder" class="md-button" href="/">
+            Home
+          </md-button>
+
+
+
+          <md-button aria-label="Builder" class="md-button" href="/deckbuilder">
+            Deckbuilder
+          </md-button>
+
+
+
+          <md-button aria-label="browse" class="md-button" href="/decks/browse">
+            Browse Decks
+          </md-button>
+
+
+      </md-fab-actions>
+    </md-toolbar>
+  </md-fab-toolbar>
   <ng-view></ng-view>
 
   <script>
@@ -50,10 +86,14 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
   
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.js"></script>
+
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/services/cards.js"></script>
     <script src="scripts/controllers/root.js"></script>
+    <script src="scripts/controllers/homepage.js"></script>
   <script src="scripts/services/deck.js"></script>
   <script src="scripts/services/stats.js"></script>
   <script src="scripts/controllers/decks.js"></script>

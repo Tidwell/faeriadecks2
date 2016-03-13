@@ -2,20 +2,38 @@
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+ng-include {
+	padding: 0 !important;
+}
 md-content, md-sidenav {
 	background: #fff;
 	background-color: #fff;
 }
 .decklisting,
 .deckbuilder,
-.deckview {
+.deckview,
+.tos {
   height: 100%;
 }
-.deckbuilder md-fab-toolbar {
-	position: absolute;
+.decklisting,
+.deckview,
+.tos {
+  padding-top: 5em;
+}
+md-fab-toolbar {
 	top: 0;
 	right: 0;
-	width: 100%
+	position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+md-fab-toolbar:not(.md-is-open) md-fab-trigger button {
+    opacity: .5;
+}
+md-fab-toolbar:not(.md-is-open) md-fab-trigger:focus button,
+md-fab-toolbar:not(.md-is-open) md-fab-trigger:active button,
+md-fab-toolbar:not(.md-is-open) md-fab-trigger:hover button {
+	opacity: 1;
 }
 .hidden {
   display: none;
@@ -211,7 +229,7 @@ md-input-container {
 	float: left;
 }
 
-.decklisting .color.human {
+.decklisting .color.human, .homepage .color.human {
 	width: 0;
 }
 
@@ -242,4 +260,20 @@ img.logo {
 .deckview stats {
 	display: block;
     padding-top: 0;
+}
+
+md-card-actions {
+	clear: both;
+}
+
+.tos {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.tos ul {
+	margin-left: 2em;
+}
+.tos ul li {
+	padding-left: .25em;
+	margin: 2em 0;
 }

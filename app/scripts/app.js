@@ -15,10 +15,22 @@ angular
     'ngSanitize',
     'ngAnimate',
     'ngResource',
-    'ngCookies'
+    'ngCookies',
+    'angularMoment'
   ])
   .config(function($routeProvider, $locationProvider, $mdThemingProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: 'views/homepage.html',
+        controller: 'HomepageCtrl',
+        controllerAs: 'home'
+      })
+      .when('/tos', {
+        templateUrl: 'views/tos.html',
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+      })
       .when('/deckbuilder', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
@@ -40,7 +52,7 @@ angular
         controllerAs: 'main'
       })
       .otherwise({
-        redirectTo: '/deckbuilder'
+        redirectTo: '/'
       });
 
     $locationProvider.html5Mode(true).hashPrefix('!');

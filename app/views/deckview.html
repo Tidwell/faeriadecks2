@@ -1,6 +1,4 @@
 <div ng-cloak class="deckview">
-  <ng-include src="'/views/open-menu.html'"></ng-include>
-
   <strong ng-show="deckView.error" style="display: block; text-align: center;">{{deckView.error}}</strong>
   
   <md-content flex layout-padding ng-show="!deckView.error">
@@ -38,5 +36,7 @@
         <stats deck="deckView.deck.deck"></stats>
       </md-content>
     </div>
+    <md-divider></md-divider>
+    <ng-include src="'/views/footer.html'"></ng-include>
   </md-content>
 </div>

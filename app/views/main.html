@@ -1,7 +1,6 @@
 <div layout="column" ng-cloak class="deckbuilder">
   <section layout="row" flex class='noselect' layout-xs="column">
     <md-content flex layout-padding class="main-content">
-      <ng-include src="'/views/menu.html'"></ng-include>
       <md-input-container>
         <label>Card Search</label>
         <input ng-model="main.searchText" />
@@ -78,6 +77,9 @@
 
       </md-grid-list>
 
+
+      <md-divider></md-divider>
+      <ng-include src="'/views/footer.html'"></ng-include>
     </md-content>
     <md-sidenav class="md-sidenav-right md-whiteframe-z2 decklist" md-component-id="right" md-is-locked-open="$mdMedia('gt-xs')">
       <md-subheader class="md-no-sticky">
@@ -85,7 +87,6 @@
           <label>Deck Name</label>
           <input ng-model="main.deckName" ng-change="main.deckChange()">
         </md-input-container>
-        <strong class="count">{{main.totalCards}}</strong>
       </md-subheader>
       <md-button class="md-raised md-primary" ng-click="main.save();" ng-disabled="!main.deck.length">
         Save
@@ -112,7 +113,7 @@
       </star-rating>
       <strong style="text-align: center">{{main.deckRating}}</strong>
       <md-tabs md-dynamic-height md-border-bottom>
-        <md-tab label="Cards">
+        <md-tab label="Cards ({{main.totalCards}})">
           <md-content class="md-padding">
             <md-list>
                <md-list-item ng-repeat="card in main.deck | decklistOrder track by $index"
