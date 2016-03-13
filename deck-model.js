@@ -11,7 +11,11 @@ var DeckSchema = new Schema({
 		unique: true,
 		'default': shortid.generate
 	},
-	deck: [],
+	deck: [{
+		id: Number,
+		name: String,
+		copies: Number
+	}],
 	created: {
 		type: Date,
 		'default': Date.now
@@ -48,5 +52,17 @@ DeckSchema.methods.calculateAverage = function() {
 	this.rating.average = Math.round((total/numRatings)*10)/10;
 };
 
+var allowed = ['id', 'copies', 'name'];
+DeckSchema.method('toJSON', function() {
+	var deckData = this.toObject();
+	deckData.deck.forEach(function(c) {
+		for (var prop in c) {
+			if (allowed.indexOf(prop) === -1) {
+				delete c[prop];
+			}
+		}
+	});
+	return deckData;
+});
 
 module.exports = mongoose.model('Deck', DeckSchema);

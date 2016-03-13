@@ -32,47 +32,6 @@ angular.module('faeriadecks2App')
 			structure: true
 		};
 
-		vm.averageStat = function(stat, conditionalStat, value) {
-			var amnt = 0;
-			var cards = 0;
-			vm.deck.forEach(function(c) {
-				if (!conditionalStat || c[conditionalStat] === value) {
-					amnt += c[stat] * c.copies;
-					cards += c.copies;
-				}
-			});
-			if (isNaN(amnt) || isNaN(cards) || !amnt || !cards) {
-				return 0;
-			}
-			return Math.floor((amnt / cards) * 100) / 100;
-		};
-
-		vm.countStatValue = function(stat, value) {
-			var cards = 0;
-			vm.deck.forEach(function(c) {
-				if (!value || c[stat] === value) {
-					cards += c.copies;
-				}
-			});
-			if (isNaN(cards)) {
-				return 0;
-			}
-			return cards;
-		};
-
-		vm.highestStat = function(stat) {
-			var highest = 0;
-			vm.deck.forEach(function(c) {
-				if (c[stat] > highest) {
-					highest = c[stat];
-				}
-			});
-			if (isNaN(highest)) {
-				return 0;
-			}
-			return highest;
-		};
-
 		function getDeckCard(id) {
 			var toRet;
 			vm.deck.forEach(function(c) {
@@ -96,24 +55,26 @@ angular.module('faeriadecks2App')
 			if (vm.totalCards === 30) {
 				return;
 			}
-			var c = getDeckCard(card.id);
-			if (c) {
+			var deckCard = getDeckCard(card.id);
+			var c = Cards.getById(card.id);
+
+			if (deckCard) {
 				if (c.rarity === 'LEGENDARY') {
 					return;
 				}
-				if (c.copies === 3) {
+				if (deckCard.copies === 3) {
 					return;
 				}
-				c.copies++;
+				deckCard.copies++;
 				vm.totalCards++;
 				return;
 			}
-			var deckCard = {};
-			for (var prop in card) {
-				deckCard[prop] = card[prop];
-			}
-			deckCard.copies = 1;
-			vm.deck.push(deckCard);
+			var newCard = {
+				id: card.id,
+				name: card.name,
+				copies: 1
+			};
+			vm.deck.push(newCard);
 			vm.totalCards++;
 		};
 		vm.remove = function(card) {

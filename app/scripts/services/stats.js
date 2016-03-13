@@ -8,7 +8,7 @@
  * Service in the faeriadecks2App.
  */
 angular.module('faeriadecks2App')
-	.service('Stats', function Stats($resource) {
+	.service('Stats', function Stats(Cards) {
 		function averageStat(stat, conditionalStat, value, deck) {
 			//when we just pass a stat to avg and the deck
 			if (typeof conditionalStat === 'object') { deck = conditionalStat; }
@@ -16,8 +16,9 @@ angular.module('faeriadecks2App')
 			var amnt = 0;
 			var cards = 0;
 			deck.forEach(function(c) {
-				if (!conditionalStat || c[conditionalStat] === value) {
-					amnt += c[stat] * c.copies;
+				var fullCard = Cards.getById(c.id);
+				if (!conditionalStat || fullCard[conditionalStat] === value) {
+					amnt += fullCard[stat] * c.copies;
 					cards += c.copies;
 				}
 			});
@@ -30,7 +31,9 @@ angular.module('faeriadecks2App')
 		function countStatValue(stat, value, deck) {
 			var cards = 0;
 			deck.forEach(function(c) {
-				if (!value || c[stat] === value) {
+
+				var fullCard = Cards.getById(c.id);
+				if (!value || fullCard[stat] === value) {
 					cards += c.copies;
 				}
 			});
@@ -43,8 +46,9 @@ angular.module('faeriadecks2App')
 		function highestStat(stat, deck) {
 			var highest = 0;
 			deck.forEach(function(c) {
-				if (c[stat] > highest) {
-					highest = c[stat];
+				var fullCard = Cards.getById(c.id);
+				if (fullCard[stat] > highest) {
+					highest = fullCard[stat];
 				}
 			});
 			if (isNaN(highest)) {

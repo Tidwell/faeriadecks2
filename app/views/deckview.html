@@ -3,7 +3,7 @@
 
   <strong ng-show="deckView.error" style="display: block; text-align: center;">{{deckView.error}}</strong>
   
-  <md-content flex layout-padding>
+  <md-content flex layout-padding ng-show="!deckView.error">
     <h1>{{deckView.deck.name || 'Untitled Deck'}}</h1>
 
     <p>
