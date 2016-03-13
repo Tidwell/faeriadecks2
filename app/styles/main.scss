@@ -217,6 +217,10 @@ md-input-container {
 	float: left;
 }
 
+.decklisting .color.human {
+	width: 0;
+}
+
 md-tooltip.deck-card-tooltip > .md-content {
   width: 400px;
   height: 400px;

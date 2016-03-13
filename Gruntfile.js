@@ -414,6 +414,10 @@ module.exports = function (grunt) {
         'compass:dist',
         'imagemin',
         'svgmin'
+      ],
+      'dist-noimg': [
+        'compass:dist',
+        'svgmin'
       ]
     },
 
@@ -461,6 +465,25 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
+    'autoprefixer',
+    'concat',
+    'ngmin',
+    'copy:dist',
+    'copy:distcards',
+    'cdnify',
+    'cssmin',
+    'uglify',
+    'filerev',
+    'usemin',
+    'htmlmin',
+    'image_resize'
+  ]);
+
+  grunt.registerTask('build-noimg', [
+    'clean:dist',
+    'wiredep',
+    'useminPrepare',
+    'concurrent:dist-noimg',
     'autoprefixer',
     'concat',
     'ngmin',
