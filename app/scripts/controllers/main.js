@@ -8,7 +8,7 @@
  * Controller of the faeriadecks2App
  */
 angular.module('faeriadecks2App')
-	.controller('MainCtrl', function(Cards, Deck, $routeParams, $location, $cookies) {
+	.controller('MainCtrl', function(Cards, Deck, $routeParams, $location, $cookies, $mdBottomSheet, $mdSidenav) {
 		var vm = this;
 
 		vm.hasRated = false;
@@ -196,6 +196,14 @@ angular.module('faeriadecks2App')
 				$cookies.put(vm.deckUrl, rate);
 			});
 		};
+
+		vm.showDeck = function() {
+			$mdSidenav('right')
+				.toggle()
+				.then(function() {
+					
+				});
+		}
 	});
 
 angular.module('faeriadecks2App').filter('colorFilter', function() {

@@ -17,7 +17,7 @@ angular
     'ngResource',
     'ngCookies'
   ])
-  .config(function($routeProvider, $locationProvider) {
+  .config(function($routeProvider, $locationProvider, $mdThemingProvider) {
     $routeProvider
       .when('/decks/browse', {
         templateUrl: 'views/decks.html',
@@ -39,5 +39,7 @@ angular
       });
 
     $locationProvider.html5Mode(true).hashPrefix('!');
-
+     $mdThemingProvider.theme('default')
+      .primaryPalette('light-blue')
+      .accentPalette('blue');
   });

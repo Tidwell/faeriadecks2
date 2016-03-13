@@ -9,7 +9,7 @@
  */
 angular.module('faeriadecks2App')
 	.service('Deck', function Deck($resource) {
-		var prefix = ''; //http://localhost:9005'
+		var prefix = 'http://localhost:9005'; //http://localhost:9005'
 		var DeckResource = $resource(prefix + '/api/decks/:deckId', {
 			deckId: '@id',
 			rating: '@rating'

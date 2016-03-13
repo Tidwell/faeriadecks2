@@ -1,40 +1,40 @@
 <div layout="column" ng-cloak class="deckbuilder">
-  <section layout="row" flex class='noselect'>
+  <section layout="row" flex class='noselect' layout-xs="column">
     <md-content flex layout-padding class="main-content">
       <ng-include src="'/views/menu.html'"></ng-include>
       <md-input-container>
         <label>Card Search</label>
         <input ng-model="main.searchText" />
       </md-input-container>
-      <section layout="row" layout-align="end center">
+      <section layout="row" layout-wrap layout-align="space-around center">
         <md-checkbox
             ng-model="main.colorFilters.human"
             aria-label="Show Human"
-            flex>
+            flex="none">
           Human
         </md-checkbox>
         <md-checkbox
             ng-model="main.colorFilters.blue"
             aria-label="Show Human"
-            flex>
+            flex="none">
           Blue
         </md-checkbox>
         <md-checkbox
             ng-model="main.colorFilters.green"
             aria-label="Show Green"
-            flex>
+            flex="none">
           Green
         </md-checkbox>
         <md-checkbox
             ng-model="main.colorFilters.red"
             aria-label="Show Red"
-            flex>
+            flex="none">
           Red
         </md-checkbox>
         <md-checkbox
             ng-model="main.colorFilters.yellow"
             aria-label="Show Yellow"
-            flex>
+            flex="none">
           Yellow
         </md-checkbox>
 
@@ -42,37 +42,38 @@
         <md-checkbox
             ng-model="main.typeFilters.creature"
             aria-label="Show Creatures"
-            flex>
+            flex="none">
           Creatures
         </md-checkbox>
 
         <md-checkbox
             ng-model="main.typeFilters.event"
             aria-label="Show Events"
-            flex>
+            flex="none">
           Events
         </md-checkbox>
         <md-checkbox
             ng-model="main.typeFilters.structure"
             aria-label="Show Structures"
-            flex>
+            flex="none">
           Structures
         </md-checkbox>
       </section>
 
       <md-grid-list
-        md-cols-xs="1" md-cols-sm="3" md-cols-md="4" md-cols-gt-md="4"
+        md-cols-xs="2" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4"
         md-row-height-gt-md="1:1" md-row-height="1:1" md-row-height-lt-md="1:1"
-        md-gutter="12px" md-gutter-gt-sm="8px">
+        md-gutter="12px" md-gutter-gt-sm="8px" class="cardlist">
 
-        <md-grid-tile class="gray" md-rowspan="1" md-colspan="1"
+        <md-grid-tile md-rowspan="1" md-colspan="1"
           ng-repeat="card in main.cards.cards | orderBy: ['color', 'faeriaCost', 'name'] | filter:main.searchText | colorFilter:main.colorFilters | typeFilter:main.typeFilters"
           class="card-selectable"
           ng-click="main.add(card)"
           ng-if="!card.uncollectable">
 
-          <img alt="{{ card.name }}" ng-src="/images/card-renders/{{ main.pad(card.id) }}.png" class="card-img" />
-          <div>
+          <md-button class="md-primary">
+            <img alt="{{ card.name }}" ng-src="/images/card-renders/{{ main.pad(card.id) }}.png" class="card-img" />
+          </md-button>
             <!-- <p class="type">{{card.type}}</p> -->
 
             <!-- <div class="icon-container" style="z-index:1; position: absolute; right: 0; top: 1em;">
@@ -92,7 +93,7 @@
             </div> -->
 
             <!-- <div class="rarity {{card.rarity}}"></div> -->
-          </div>
+          
           <!-- <p class="txt" ng-bind-html="card.text" ng-show="card.text"></p> -->
           <!-- <md-grid-tile-footer>
             <h3>{{ card.name }}</h3>
@@ -103,7 +104,7 @@
       </md-grid-list>
 
     </md-content>
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2 decklist" md-component-id="right" md-is-locked-open="true">
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2 decklist" md-component-id="right" md-is-locked-open="$mdMedia('gt-xs')">
       <md-subheader class="md-no-sticky">
         <md-input-container>
           <label>Deck Name</label>
@@ -208,4 +209,8 @@
       </md-tabs>
     </md-sidenav>
   </section>
+
+  <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center" hide-gt-xs>
+    <md-button flex="100" class="md-primary md-raised" ng-click="main.showDeck()">View Deck ({{main.totalCards}})</md-button>
+  </div>
 </div>

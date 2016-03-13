@@ -196,18 +196,16 @@ md-input-container {
 	left: 0;
 }
 
+.cardlist .md-button {
+	height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 @media (max-width: 600px) {
-	.main-content {
+	md-tooltip.deck-card-tooltip > .md-content {
 		display: none;
-	}
-	md-sidenav.md-locked-open.md-closed.md-sidenav-right.decklist {
-	    width: 98%;
-	    position: relative;
-	    left: 0;
-	    top: 0;
-	    display: block;
-	    max-width: 98%;
-	    margin: 0 1%;
 	}
 }
 
