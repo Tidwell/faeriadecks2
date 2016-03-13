@@ -6,10 +6,9 @@ md-content, md-sidenav {
 	background: #fff;
 	background-color: #fff;
 }
-.decklisting {
-	height: 100%
-}
-.deckbuilder {
+.decklisting,
+.deckbuilder,
+.deckview {
   height: 100%;
 }
 .deckbuilder md-fab-toolbar {
@@ -208,9 +207,6 @@ md-input-container {
 		display: none;
 	}
 }
-
-.decklisting a {
-}
 .decklisting p span.color {
 	float: left;
 }
@@ -224,4 +220,21 @@ md-tooltip.deck-card-tooltip > .md-content {
   height: 400px;
   background: none;
   padding: 0;
+}
+
+.deckview md-list {
+	color: white;
+	font-weight: bold;
+}
+
+.deckview h1 {
+	margin-top: 0;
+}
+.deckview .flex-50 {
+	max-height: none;
+}
+
+img.logo {
+	max-width: 15%;
+	float: left;
 }

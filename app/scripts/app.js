@@ -19,23 +19,28 @@ angular
   ])
   .config(function($routeProvider, $locationProvider, $mdThemingProvider) {
     $routeProvider
+      .when('/deckbuilder', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
       .when('/decks/browse', {
         templateUrl: 'views/decks.html',
         controller: 'DecksCtrl',
         controllerAs: 'decks'
       })
       .when('/:deckId', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/deckview.html',
+        controller: 'DeckViewCtrl',
+        controllerAs: 'deckView'
       })
-      .when('/', {
+      .when('/deckbuilder/:deckId', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/deckbuilder'
       });
 
     $locationProvider.html5Mode(true).hashPrefix('!');
