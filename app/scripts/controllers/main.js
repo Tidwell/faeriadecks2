@@ -171,6 +171,7 @@ angular.module('faeriadecks2App')
 
 angular.module('faeriadecks2App').filter('decklistOrder', function(Cards) {
 	return function(deck) {
+		if (!deck) { return deck; }
 		deck.sort(function(cardA, cardB){
 			var fullCardA = Cards.getById(cardA.id);
 			var fullCardB = Cards.getById(cardB.id);
