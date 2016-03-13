@@ -115,7 +115,7 @@
         <md-tab label="Cards">
           <md-content class="md-padding">
             <md-list>
-               <md-list-item ng-repeat="card in main.deck track by $index"
+               <md-list-item ng-repeat="card in main.deck | decklistOrder track by $index"
                   ng-click="main.remove(card)"
                   style="background-image: url('/images/illustrations/{{ main.pad(card.id) }}.jpg');"
                   class="list-card">

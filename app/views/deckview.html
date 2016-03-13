@@ -23,7 +23,7 @@
     </md-button>
     <div layout="row">
       <md-list flex="50">
-         <md-list-item ng-repeat="card in deckView.deck.deck track by $index"
+         <md-list-item ng-repeat="card in deckView.deck.deck | decklistOrder track by $index"
             style="background-image: url('/images/illustrations/{{ deckView.pad(card.id) }}.jpg');"
             class="list-card">
 
