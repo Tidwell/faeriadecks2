@@ -69,12 +69,14 @@ angular.module('faeriadecks2App')
 				vm.totalCards++;
 				return;
 			}
+
 			var newCard = {
 				id: card.id,
 				name: card.name,
 				copies: 1
 			};
 			vm.deck.push(newCard);
+
 			vm.totalCards++;
 		};
 		vm.remove = function(card) {
@@ -164,8 +166,26 @@ angular.module('faeriadecks2App')
 				.then(function() {
 					
 				});
-		}
+		};
 	});
+
+angular.module('faeriadecks2App').filter('decklistOrder', function(Cards) {
+	return function(deck) {
+		console.log(deck)
+		deck.sort(function(cardA, cardB){
+			var fullCardA = Cards.getById(cardA.id);
+			var fullCardB = Cards.getById(cardB.id);
+			if (fullCardA.faeriaCost > fullCardB.faeriaCost) {
+				return 1;
+			}
+			if (fullCardA.faeriaCost === fullCardB.faeriaCost && fullCardA.name > fullCardB.name) {
+				return 1;
+			}
+			return -1;
+		});
+		return deck;
+	}
+});
 
 angular.module('faeriadecks2App').filter('colorFilter', function() {
 	return function(cards, colorFilters) {
