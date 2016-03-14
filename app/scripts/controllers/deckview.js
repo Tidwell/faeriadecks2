@@ -8,7 +8,7 @@
  * Controller of the faeriadecks2App
  */
 angular.module('faeriadecks2App')
-	.controller('DeckViewCtrl', function(Cards, Deck, $routeParams, $cookies) {
+	.controller('DeckViewCtrl', function(Cards, Deck, $routeParams, $cookies, $filter) {
 		var vm = this;
 		vm.hasRated = false;
 
@@ -17,6 +17,7 @@ angular.module('faeriadecks2App')
 				deckId: $routeParams.deckId
 			}).$promise.then(function(deck) {
 				vm.deck = deck;
+				vm.deck.deck = $filter('decklistOrder')(vm.deck.deck);
 				if ($cookies.get(vm.deck.url)) { vm.hasRated = true; }
 				//check cookie on load if rated
 			}, function() {
