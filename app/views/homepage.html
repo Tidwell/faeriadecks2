@@ -10,7 +10,7 @@
 	<div layout="row" layout-xs="column" layout-sm="column" layout-align="stretch center" class="decklists-container" layout-padding>
 		<div flex>
 			<h3 layout-padding>Top Rated</h3>
-			<md-card ng-repeat="deck in home.topDecks | fullDecks | limitTo:6 track by $index">
+			<md-card ng-repeat="deck in home.topDecks | fullDecks | limitTo:10 track by $index">
 				<md-card-title>
 					<md-card-title-text>
 						<span class="md-headline">
@@ -29,7 +29,7 @@
 		</div>
 		<div flex>
 			<h3 layout-padding>Newest</h3>
-			<md-card ng-repeat="deck in home.recentDecks | fullDecks | limitTo:6 track by $index">
+			<md-card ng-repeat="deck in home.recentDecks | fullDecks | limitTo:10 track by $index">
 				<md-card-title>
 					<md-card-title-text>
 						<span class="md-headline">

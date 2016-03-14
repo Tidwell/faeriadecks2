@@ -1,4 +1,5 @@
 angular.module('faeriadecks2App').filter('deckColorFilter', function(Cards) {
+	var colorCache = {};
 
 	function getColors(deck) {
 		if (!deck || !deck.deck) { return []; }
@@ -19,7 +20,15 @@ angular.module('faeriadecks2App').filter('deckColorFilter', function(Cards) {
 			return toRet;
 		}
 		decks.forEach(function(deck) {
-			var colors = getColors(deck);
+			if (!deck || !deck.url) { return; }
+			var colors;
+			if (colorCache[deck.url]) {
+				colors = colorCache[deck.url];
+			} else {
+				colors = getColors(deck);
+				colorCache[deck.url] = colors;
+			}
+			
 			var matches = true;
 			colors.forEach(function(c){
 				if (!colorFilters[c]) {
