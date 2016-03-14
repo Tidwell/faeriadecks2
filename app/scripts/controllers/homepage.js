@@ -30,6 +30,7 @@ angular.module('faeriadecks2App')
 			var colors = [];
 			deck.deck.forEach(function(c){
 				var card = vm.getById(c.id);
+				if (!card) { console.log('find', c.id); return; }
 				if (colors.indexOf(card.color) === -1) {
 					colors.push(card.color);
 				}

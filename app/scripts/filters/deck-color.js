@@ -1,11 +1,11 @@
 angular.module('faeriadecks2App').filter('deckColorFilter', function(Cards) {
 	var colorCache = {};
-
 	function getColors(deck) {
 		if (!deck || !deck.deck) { return []; }
 		var colors = [];
 		deck.deck.forEach(function(c){
 			var card = Cards.getById(c.id);
+			if (!card) { console.log('find', c.id); return; }
 			if (colors.indexOf(card.color) === -1) {
 				colors.push(card.color.toLowerCase());
 			}
