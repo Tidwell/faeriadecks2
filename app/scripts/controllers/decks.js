@@ -14,6 +14,14 @@ angular.module('faeriadecks2App')
 		this.topDecks = Deck.topList();
 		this.cards = Cards.get();
 
+		vm.colorFilters = {
+			human: true,
+			green: true,
+			yellow: true,
+			blue: true,
+			red: true
+		};
+
 		this.getById = function(cardId) {
 			var toRet;
 			if (!this.cards || !this.cards.cards) { return {}; }
