@@ -26,11 +26,15 @@ md-fab-toolbar {
 	top: 0;
 	right: 0;
 	position: absolute;
-    width: 10%;
+    pointer-events: none;
     z-index: 100;
+    width: 100%;
 }
 md-fab-toolbar.md-is-open {
-	width: 100%;
+	pointer-events: auto;
+}
+md-fab-toolbar md-fab-trigger {
+	pointer-events: auto;
 }
 md-fab-toolbar:not(.md-is-open) md-fab-trigger button {
     opacity: .5;
