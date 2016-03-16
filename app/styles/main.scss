@@ -11,9 +11,11 @@ md-content, md-sidenav {
 }
 .decklisting,
 .deckbuilder,
-.deckview,
 .tos {
   height: 100%;
+}
+.deckview {
+	min-height: 100%;
 }
 .deckview,
 .tos {
@@ -294,4 +296,11 @@ md-card-actions {
 }
 .deckview .list-card-img {
 	max-height: 3em;
+}
+.img-list-container {
+	padding-bottom: 10em;
+}
+.deckview md-tabs.flex-60,
+.deckview md-content.flex-40 {
+	max-height: none;
 }
