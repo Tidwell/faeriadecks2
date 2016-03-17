@@ -1,7 +1,12 @@
 <div class="userdecks">
 	<strong ng-show="userDecks.error" style="display: block; text-align: center;">{{userDecks.error}}</strong>
 	<md-content flex layout-padding ng-show="!userDecks.error">
-		<h1>Decks By {{userDecks.decks[0].author.name || 'No User'}}</h1>
+		<h1>
+		  <md-button class="md-fab">
+	      	<img src="{{userDecks.decks[0].author.image}}" class="userimg" />
+	      </md-button>
+		  Decks By {{userDecks.decks[0].author.name || 'No User'}}
+		</h1>
 		
 		<md-content class="md-padding">
 	    <div>

@@ -4,6 +4,13 @@
 			<span class="md-headline">
 				<a href="/{{deck.url}}">{{ deck.name || 'Untitled Deck'}}</a>
 			</span>
+			<span ng-show="deck.author.name" class="author-info-container">
+		      <md-button class="md-fab md-mini" href="/decks/by/{{deck.author.steamId}}" aria-label="Decks by {{deck.author.name}}" ng-show="showUserImg">
+		      	<img src="{{deck.author.image}}" />
+		      </md-button>
+		      <strong>By <a href="/decks/by/{{deck.author.steamId}}">{{deck.author.name}}</a></strong>
+		    </span>
+		    
 			<span class="md-subhead">
 				<star-rating
 			      ng-model="deck.rating.average"
@@ -15,12 +22,6 @@
 		</md-card-title-text>
 	</md-card-title>
 	<md-card-actions layout="column" layout-align="center end">
-	    <span ng-show="deck.author.name" class="author-info-container">
-	      <md-button class="md-fab md-mini" href="/decks/by/{{deck.author.steamId}}">
-	      	<img src="{{deck.author.image}}" />
-	      </md-button>
-	      <strong><a href="/decks/by/{{deck.author.steamId}}">{{deck.author.name}}</a></strong>
-	    </span>
 	    <div layout="row">
 			<span ng-repeat="color in getColors(deck)" class="color {{color | lowercase}}"></span>
 		</div>

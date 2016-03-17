@@ -8,13 +8,17 @@
  * Service in the faeriadecks2App.
  */
 angular.module('faeriadecks2App')
-	.service('User', function User($http) {
-		var prefix = 'http://localhost:9005'; //http://localhost:9005'
+	.service('User', function User($http, APIDomain) {
+		var prefix = APIDomain;
 		var user = {};
+		var getting = false;
 
 		return {
 			get: function() {
-				if (!user.user) { $http.get(prefix + '/account').then(function(data){ user.user = data.data.user._json; }); }
+				if (!user.user && !getting) {
+					$http.get(prefix + '/account').then(function(data){ user.user = data.data.user._json; });
+					getting = true;
+				}
 				return user;
 			}
 		};

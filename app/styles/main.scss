@@ -323,13 +323,13 @@ md-card-actions {
 .author-info-container img {
 	width: 3em;
     margin-left: -.5em;
-    margin-top: -.25em;	
+    margin-top: 0;
 }
 .author-info-container .md-button.md-fab.md-mini {
 	margin-left: 0;
 }
 md-card {
-padding-top: 1em;
+	padding-top: 1em;
 	padding-right: 1em;
     padding-bottom: 1em;
 }
