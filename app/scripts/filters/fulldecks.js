@@ -9,7 +9,7 @@ angular.module('faeriadecks2App').filter('fullDecks', function(Cards) {
 		return total;
 	}
 	return function(decks) {
-		if (!decks) {
+		if (!decks || !decks.forEach) {
 			return decks;
 		}
 		var toRet = [];

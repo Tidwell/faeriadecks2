@@ -4,11 +4,13 @@
 			<span class="md-headline">
 				<a href="/{{deck.url}}">{{ deck.name || 'Untitled Deck'}}</a>
 			</span>
-			<span ng-show="deck.author.name" class="author-info-container">
-		      <md-button class="md-fab md-mini" href="/decks/by/{{deck.author.steamId}}" aria-label="Decks by {{deck.author.name}}" ng-show="showUserImg">
+			<span class="author-info-container">
+		      <md-button class="md-fab md-mini" href="/decks/by/{{deck.author.steamId}}"
+		      	aria-label="Decks by {{deck.author.name}}"
+		      	ng-show="showUserImg && deck.author.name">
 		      	<img src="{{deck.author.image}}" />
 		      </md-button>
-		      <strong>By <a href="/decks/by/{{deck.author.steamId}}">{{deck.author.name}}</a></strong>
+		      <strong ng-show="deck.author.name">By <a href="/decks/by/{{deck.author.steamId}}">{{deck.author.name}}</a></strong> <span am-time-ago="deck.created"></span>
 		    </span>
 		    
 			<span class="md-subhead">
@@ -16,9 +18,8 @@
 			      ng-model="deck.rating.average"
 			      is-readonly="hasRated(deck.url)"
 			      on-rating-select="submitRating(rating, deck.url)"></star-rating>
-
-				<span am-time-ago="deck.created"></span>
 			</span>
+			<span class="disqus-comment-count" data-disqus-url="http://www.faeriadecks.com/{{deck.url}}"></span>
 		</md-card-title-text>
 	</md-card-title>
 	<md-card-actions layout="column" layout-align="center end">

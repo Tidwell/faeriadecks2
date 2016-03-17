@@ -8,7 +8,7 @@
  * Controller of the faeriadecks2App
  */
 angular.module('faeriadecks2App')
-	.controller('UserdecksCtrl', function(Deck, $routeParams) {
+	.controller('UserdecksCtrl', function(Deck, $routeParams, DiscusComments) {
 		var vm = this;
 
 		if ($routeParams.steamid) {
@@ -16,6 +16,7 @@ angular.module('faeriadecks2App')
 				steamid: $routeParams.steamid
 			}).$promise.then(function(data) {
 				vm.decks = data;
+				DiscusComments.load();
 			}, function() {
 				vm.error = 'User could not be found.';
 			});

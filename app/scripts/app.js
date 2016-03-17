@@ -16,7 +16,8 @@ angular
     'ngAnimate',
     'ngResource',
     'ngCookies',
-    'angularMoment'
+    'angularMoment',
+    'angularUtils.directives.dirDisqus'
   ])
   .config(function($routeProvider, $locationProvider, $mdThemingProvider) {
     $routeProvider

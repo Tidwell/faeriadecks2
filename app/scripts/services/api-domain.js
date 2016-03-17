@@ -8,4 +8,4 @@
  * Service in the faeriadecks2App.
  */
 angular.module('faeriadecks2App')
-	.constant('APIDomain', 'http://localhost:9005');
+	.constant('APIDomain', 'http://www.faeriadecks.com'); //  http://localhost:9005

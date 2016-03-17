@@ -8,10 +8,13 @@
  * Controller of the faeriadecks2App
  */
 angular.module('faeriadecks2App')
-	.controller('DecksCtrl', function(Deck, Cards) {
+	.controller('DecksCtrl', function(Deck, Cards, $timeout, DiscusComments) {
 		var vm = this;
 		this.recentDecks = Deck.list();
 		this.topDecks = Deck.topList();
+
+		DiscusComments.onPromises([this.recentDecks.$promise, this.topDecks.$promise]);
+
 		this.cards = Cards.get();
 
 		vm.colorFilters = {

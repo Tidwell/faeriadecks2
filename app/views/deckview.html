@@ -57,6 +57,9 @@
               <stats deck="deckView.deck.deck"></stats>
             </md-content>
           </md-tab>
+          <md-tab label="Comments" ng-show="vm.deck.url">
+            <dir-disqus config="deckView.disqusConfig"></dir-disqus>
+          </md-tab>
         </md-tabs>
       </md-content>
     </div>

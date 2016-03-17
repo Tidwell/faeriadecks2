@@ -8,10 +8,12 @@
  * Controller of the faeriadecks2App
  */
 angular.module('faeriadecks2App')
-	.controller('HomepageCtrl', function(Deck, Cards) {
+	.controller('HomepageCtrl', function(Deck, Cards, DiscusComments) {
 		var vm = this;
 		this.recentDecks = Deck.list();
 		this.topDecks = Deck.topList();
+
+		DiscusComments.onPromises([this.recentDecks.$promise, this.topDecks.$promise]);
 		this.cards = Cards.get();
 
 		this.getById = function(cardId) {
