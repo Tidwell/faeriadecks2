@@ -10,8 +10,8 @@
 angular.module('faeriadecks2App')
 	.controller('UserdecksCtrl', function(Deck, $routeParams, DiscusComments) {
 		var vm = this;
-		vm.deckId = $routeParams.steamid
-		if (vm.deckId) {
+		vm.steamId = $routeParams.steamid
+		if (vm.steamId) {
 			Deck.byUser({
 				steamid: $routeParams.steamid
 			}).$promise.then(function(data) {
