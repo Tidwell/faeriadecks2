@@ -1,3 +1,4 @@
+var config = require('./src/config');
 var port = process.env.PORT || 9005; // set our port
 
 // call the packages we need
@@ -8,11 +9,12 @@ var cors = require('cors');
 var spa = require('express-spa');
 
 var path = require('path');
-app.use(express.static(path.join(__dirname , './public')));
+
+app.use(express.static(path.join(__dirname , config.appDir)));
 
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://localhost/faeriadecks2'); // connect to our database
-var Deck = require('./deck-model');
+mongoose.connect(config.mongo); // connect to our database
+var Deck = require('./src/deck-model');
 
 app.use(cors());
 // configure app to use bodyParser()
@@ -48,6 +50,13 @@ router.post('/decks/:url/rate/:rating', function(req,res){
 	});
 });
 
+router.get('/decks/by/:steamid', function(req, res) {
+	Deck.find({'author.steamId': req.params.steamid}, function(err,decks){
+		if (err || !decks) { return res.sendStatus(404); }
+		res.json(decks);
+	});
+});
+
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/decks/:url', function(req, res) {
 	Deck.findOne({url: req.params.url}, function(err,deck){
@@ -57,14 +66,47 @@ router.get('/decks/:url', function(req, res) {
 });
 
 router.post('/decks', function(req, res) {
-	if (!req.body.deck.length) { return res.sendStatus(404); }
+	if (!req.body.deck.length) { return res.sendStatus(400); }
+
 	var d = new Deck(req.body);
+	if (req.user) {
+		d.author = {
+			steamId: req.user.id,
+			name: req.user.displayName,
+			image: req.user._json.avatarmedium
+		};
+	}
 
 	d.save(function(err,deck){
 		if (err || !deck) { return res.sendStatus(404); }
 		res.json(deck);
 	});
 });
+
+router.post('/decks/:url', function(req, res) {
+	if (!req.body.deck.length || !req.params.url || !req.user) { return res.sendStatus(400); }
+
+	Deck.findOne({url:req.params.url}, function(err,deck){
+		if (err || !deck) { return res.sendStatus(404); }
+		if (deck.author.steamId !== req.user.id) {
+			return res.sendStatus(400).send('You dont own that deck.');
+		}
+		deck.deck = req.body.deck;
+		deck.name = req.body.name;
+		deck.notes = req.body.notes;
+		deck.created = Date.now();
+
+		deck.author.name = req.user.displayName;
+		deck.author.image = req.user._json.avatarmedium;
+
+		deck.save(function(err,deck){
+			if (err || !deck) { return res.sendStatus(404); }
+			res.json(deck);
+		});
+
+	});
+});
+
 
 router.get('/decks', function(req, res) {
 	var q = Deck.find({}, {}, { sort: { 'created' : -1 } })
@@ -76,14 +118,20 @@ router.get('/decks', function(req, res) {
 
 // more routes for our API will happen here
 
+//configure the auth routes
+require('./src/auth')(app);
+
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
-app.use(spa(__dirname + '/public/index.html'));
+app.use(spa(config.indexFile));
 
 
 // START THE SERVER
 // =============================================================================
 app.listen(port);
+process.on('uncaughtException', function (err) {
+    console.log('exception', err); // err.message is "foobar"
+});
 console.log('Magic happens on port ' + port);

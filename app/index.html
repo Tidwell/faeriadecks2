@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="styles/homepage.css">
     <!-- endbuild -->
 </head>
-<body ng-app="faeriadecks2App" ng-cloak>
+<body ng-app="faeriadecks2App" ng-cloak ng-controller="RootCtrl as root">
 
   <md-fab-toolbar md-direction="left" md-open="true">
     <md-fab-trigger class="align-with-text">
@@ -60,6 +60,34 @@
       </md-fab-actions>
     </md-toolbar>
   </md-fab-toolbar>
+
+  <div class="user-bar">
+    <div ng-show="!root.user.user.personaname">
+      <a href="http://localhost:9005/auth/steam" target="_self">
+        <img src="/images/steam.png" style="margin-top: 1.5em;"/>
+      </a>
+    </div>
+    <div ng-show="root.user.user.personaname">
+        <md-menu>
+          <md-button class="md-fab" aria-label="Open User Menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <img src="{{root.user.user.avatarmedium}}" class="userimg" />
+          </md-button>
+          <md-menu-content width="6">
+            <md-menu-item>
+              <md-button href="/decks/by/{{root.user.user.steamid}}" target="_self">
+                My Decks
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button href="/logout" target="_self">
+                Logout
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+    </div>
+  </div>
+
   <ng-view></ng-view>
 
   <script>
@@ -92,23 +120,29 @@
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    
     <script src="scripts/services/cards.js"></script>
-    <script src="scripts/controllers/root.js"></script>
-    <script src="scripts/controllers/homepage.js"></script>
     <script src="scripts/services/deck.js"></script>
     <script src="scripts/services/stats.js"></script>
+    <script src="scripts/services/user.js"></script>
+
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/root.js"></script>
+    <script src="scripts/controllers/homepage.js"></script>
     <script src="scripts/controllers/decks.js"></script>
-    <script src="scripts/directives/star-rating.js"></script>
     <script src="scripts/controllers/deckview.js"></script>
+    <script src="scripts/controllers/userdecks.js"></script>
+    
+    <script src="scripts/directives/star-rating.js"></script>
     <script src="scripts/directives/stats.js"></script>
+    <script src="scripts/directives/deck-item.js"></script>
+    
 
     <script src="scripts/filters/color.js"></script>
     <script src="scripts/filters/decklist-order.js"></script>
     <script src="scripts/filters/fulldecks.js"></script>
     <script src="scripts/filters/type.js"></script>
     <script src="scripts/filters/deck-color.js"></script>
-
   <!-- endbuild -->
 </body>
 </html>

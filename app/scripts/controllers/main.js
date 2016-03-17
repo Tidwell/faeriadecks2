@@ -8,7 +8,8 @@
  * Controller of the faeriadecks2App
  */
 angular.module('faeriadecks2App')
-	.controller('MainCtrl', function(Cards, Deck, $routeParams, $location, $cookies, $mdBottomSheet, $mdSidenav) {
+	.controller('MainCtrl', function(Cards, Deck, $routeParams, $location, $cookies, $mdBottomSheet, $mdSidenav, User) {
+		var user = User.get();
 		var vm = this;
 
 		vm.hasRated = false;
@@ -17,6 +18,7 @@ angular.module('faeriadecks2App')
 		vm.totalCards = 0;
 		vm.deckName = '';
 		vm.deckUrl = '';
+		vm.deckNotes = '';
 
 		vm.colorFilters = {
 			human: true,
@@ -107,7 +109,7 @@ angular.module('faeriadecks2App')
 			return str;
 		};
 
-
+		vm.rawDeck = {};
 		if ($routeParams.deckId) {
 			Deck.get({
 				deckId: $routeParams.deckId
@@ -115,12 +117,15 @@ angular.module('faeriadecks2App')
 				vm.deckName = deck.name;
 				vm.deckUrl = deck.url;
 				vm.deck = deck.deck;
+				vm.rawDeck = deck;
 				vm.deckRating = deck.rating.average;
 				var count = 0;
 				vm.deck.forEach(function(card) {
 					count += card.copies;
 				});
 				vm.totalCards = count;
+				vm.deckNotes = deck.notes;
+				vm.deckAuthor = deck.author;
 
 				if ($cookies.get(vm.deckUrl)) { vm. hasRated = true; }
 				//check cookie on load if rated
@@ -130,9 +135,24 @@ angular.module('faeriadecks2App')
 		}
 
 		vm.save = function() {
-			var d = new Deck({
+			var d;
+			if (user.user && vm.deckUrl && vm.deckAuthor && vm.deckAuthor.steamId === user.user.steamid) {
+				d = new Deck(vm.rawDeck);
+				d.name = vm.deckName;
+				d.deck = vm.deck;
+				d.notes = vm.deckNotes;
+				d.id = vm.deckUrl;
+				d.$save().then(function(deck) {
+					$location.path('/' + deck.url);
+				});
+
+				return;
+			}
+
+			d = new Deck({
 				name: vm.deckName,
-				deck: vm.deck
+				deck: vm.deck,
+				notes: vm.deckNotes
 			});
 			d.$save().then(function(deck) {
 				$location.path('/' + deck.url);

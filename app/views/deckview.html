@@ -1,23 +1,14 @@
 <div ng-cloak class="deckview"> <strong ng-show="deckView.error" style="display: block; text-align: center;">{{deckView.error}}</strong>
 
   <md-content flex layout-padding ng-show="!deckView.error">
-    <h1>{{deckView.deck.name || 'Untitled Deck'}}</h1>
-
+    <deck-item deck="deckView.deck" show-copy="true"></deck-item>
     <p>
       <a href="http://www.faeriadecks.com/{{deckView.deck.url}}">faeriadecks.com/{{deckView.deck.url}}</a>
     </p>
-
-    <star-rating
-      ng-model="deckView.deck.rating.average"
-      is-readonly="deckView.hasRated"
-      on-rating-select="deckView.submitRating(rating)"></star-rating>
     <br />
-    <md-button aria-label="Fork" class="md-raised md-primary" href="/deckbuilder/{{deckView.deck.url}}"> <i class="fa fa-code-fork"></i>
-      Edit Copy
-    </md-button>
-    <div layout="row" class="img-list-container">
+    <div layout="row" layout-xs="column" class="img-list-container">
 
-      <md-tabs md-dynamic-height md-border-bottom  flex="60">
+      <md-tabs md-dynamic-height md-border-bottom  flex="60" flex-xs="100">
         <md-tab label="Card List">
           <md-content class="md-padding">
             <md-list>
@@ -56,8 +47,17 @@
         </md-tab>
       </md-tabs>
 
-      <md-content layout-padding flex="40">
-        <stats deck="deckView.deck.deck"></stats>
+      <md-content flex="40" flex-xs="100">
+         <md-tabs md-dynamic-height md-border-bottom>
+          <md-tab label="Notes">
+            <md-content layout-padding>{{ deckView.deck.notes || 'No Notes.' }}</md-content>
+          </md-tab>
+          <md-tab label="Stats">
+            <md-content layout-padding>
+              <stats deck="deckView.deck.deck"></stats>
+            </md-content>
+          </md-tab>
+        </md-tabs>
       </md-content>
     </div>
     <md-divider></md-divider>

@@ -10,42 +10,12 @@
 	<div layout="row" layout-xs="column" layout-sm="column" layout-align="stretch center" class="decklists-container" layout-padding>
 		<div flex>
 			<h3 layout-padding>Top Rated</h3>
-			<md-card ng-repeat="deck in home.topDecks | fullDecks | limitTo:10 track by $index">
-				<md-card-title>
-					<md-card-title-text>
-						<span class="md-headline">
-							<a href="/{{deck.url}}">{{ deck.name || 'Untitled Deck'}}</a>
-						</span>
-						<span class="md-subhead">
-							<star-rating ng-model="deck.rating.average" is-readonly="true"></star-rating>
-						</span>
-					</md-card-title-text>
-				</md-card-title>
-				<md-card-actions layout="row" layout-align="end center">
-					<span ng-repeat="color in home.getColors(deck)" class="color {{color | lowercase}}"></span>
-				</md-card-actions>
-			</md-card>
+			<deck-item ng-repeat="deck in home.topDecks | fullDecks | limitTo:10 track by $index" deck="deck"></deck-item>
 			<a href="/decks/browse" class="more-link">more</a>
 		</div>
 		<div flex>
 			<h3 layout-padding>Newest</h3>
-			<md-card ng-repeat="deck in home.recentDecks | fullDecks | limitTo:10 track by $index">
-				<md-card-title>
-					<md-card-title-text>
-						<span class="md-headline">
-							<a href="/{{deck.url}}">{{ deck.name || 'Untitled Deck'}}</a>
-						</span>
-						<span class="md-subhead">
-							<star-rating ng-model="deck.rating.average" is-readonly="true"></star-rating>
-
-							<span am-time-ago="deck.created"></span>
-						</span>
-					</md-card-title-text>
-				</md-card-title>
-				<md-card-actions layout="row" layout-align="end center">
-					<span ng-repeat="color in home.getColors(deck)" class="color {{color | lowercase}}"></span>
-				</md-card-actions>
-			</md-card>
+			<deck-item ng-repeat="deck in home.recentDecks | fullDecks | limitTo:10 track by $index" deck="deck"></deck-item>
 			<a href="/decks/browse" class="more-link">more</a>
 		</div>
 	</div>

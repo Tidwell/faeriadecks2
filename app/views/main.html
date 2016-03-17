@@ -8,13 +8,13 @@
       <section layout="row" layout-wrap layout-align="space-around center">
         <md-checkbox
             ng-model="main.colorFilters.human"
-            aria-label="Show Human"
+            aria-label="Show Neutral"
             flex="none">
-          Human
+          Neutral
         </md-checkbox>
         <md-checkbox
             ng-model="main.colorFilters.blue"
-            aria-label="Show Human"
+            aria-label="Show Blue"
             flex="none">
           Blue
         </md-checkbox>
@@ -89,7 +89,9 @@
         </md-input-container>
       </md-subheader>
       <md-button class="md-raised md-primary" ng-click="main.save();" ng-disabled="!main.deck.length">
-        Save
+        <span ng-show="!root.user.user.steamid || !main.deckUrl || root.user.user.steamid != main.deckAuthor.steamId">Save New</span>
+
+        <span ng-show="root.user.user.steamid && root.user.user.steamid == main.deckAuthor.steamId">Update Existing</span>
       </md-button>
 
       <md-button class="md-raised" ng-click="main.reset()">
@@ -113,7 +115,7 @@
       </star-rating>
       <strong style="text-align: center">{{main.deckRating}}</strong>
       <md-tabs md-dynamic-height md-border-bottom>
-        <md-tab label="Cards ({{main.totalCards}})">
+        <md-tab label="Deck ({{main.totalCards}})">
           <md-content class="md-padding">
             <md-list>
                <md-list-item ng-repeat="card in main.deck | decklistOrder track by $index"
@@ -133,6 +135,14 @@
         <md-tab label="Stats">
           <md-content class="md-padding">
               <stats deck="main.deck"></stats>
+          </md-content>
+        </md-tab>
+        <md-tab label="Notes">
+          <md-content class="md-padding">
+              <md-input-container class="md-block">
+                <label>Notes</label>
+                <textarea ng-model="main.deckNotes" md-maxlength="10000" rows="10" md-select-on-focus></textarea>
+              </md-input-container>
           </md-content>
         </md-tab>
       </md-tabs>

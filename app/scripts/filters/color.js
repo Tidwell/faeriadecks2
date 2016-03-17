@@ -6,6 +6,7 @@ angular.module('faeriadecks2App').filter('colorFilter', function() {
 			return toRet;
 		}
 		cards.forEach(function(c) {
+			if (!c || !c.color) { return; }
 			if (colorFilters[c.color.toLowerCase()]) {
 				toRet.push(c);
 			}

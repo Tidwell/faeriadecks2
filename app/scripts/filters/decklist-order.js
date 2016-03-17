@@ -13,5 +13,5 @@ angular.module('faeriadecks2App').filter('decklistOrder', function(Cards) {
 			return -1;
 		});
 		return deck;
-	}
+	};
 });

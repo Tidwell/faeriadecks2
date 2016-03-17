@@ -14,11 +14,12 @@ md-content, md-sidenav {
 .tos {
   height: 100%;
 }
-.deckview {
+.deckview, .userdecks {
 	min-height: 100%;
 }
 .deckview,
-.tos {
+.tos,
+.userdecks {
   padding-top: 5em;
 }
 .decklisting {
@@ -240,7 +241,7 @@ md-input-container {
 	float: left;
 }
 
-.decklisting .color.human, .homepage .color.human {
+.color.human {
 	width: 0;
 }
 
@@ -303,4 +304,27 @@ md-card-actions {
 .deckview md-tabs.flex-60,
 .deckview md-content.flex-40 {
 	max-height: none;
+	overflow: visible;
+}
+
+.user-bar {
+	position: absolute;
+	top: 0;
+	right: 5em;
+	z-index: 90;
+}
+.userimg,
+.deckview .profile-img img {
+	width: 5em;
+    margin-left: -1em;
+    margin-top: -.5em;
+}
+
+.author-info-container img {
+	width: 3em;
+    margin-left: -.5em;
+    margin-top: -.25em;	
+}
+.author-info-container .md-button.md-fab.md-mini {
+	margin-left: 0;
 }

@@ -51,6 +51,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/decks/by/:steamid', {
+        templateUrl: 'views/userdecks.html',
+        controller: 'UserdecksCtrl',
+        controllerAs: 'userDecks'
+      })
       .otherwise({
         redirectTo: '/'
       });

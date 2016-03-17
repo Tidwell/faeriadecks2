@@ -23,10 +23,16 @@ var DeckSchema = new Schema({
 	rating: {
 		1: rating,
 		2: rating,
-		3: rating,
+		3: {type: Number, 'default': 1},
 		4: rating,
 		5: rating,
-		average: rating
+		average: {type: Number, 'default': 3}
+	},
+	notes: String,
+	author: {
+		steamId: String,
+		name: String,
+		image: String
 	}
 });
 
