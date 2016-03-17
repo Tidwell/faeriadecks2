@@ -6,12 +6,12 @@
 	      	<img src="{{userDecks.decks[0].author.image}}" class="userimg" />
 	      </md-button>
 	      <md-button class="md-fab" ng-show="!userDecks.decks[0].author.image && root.user.user.steamid === userDecks.steamId">
-	      	<img src="{{userDecks.decks[0].author.image}}" class="userimg" />
+	      	<img src="{{root.user.user.avatarmedium}}" class="userimg" />
 	      </md-button>
-	      <span ng-show="root.user.user.steamid && root.user.user.steamid === userDecks.decks[0].author.steamId">
+	      <span ng-show="root.user.user.steamid && root.user.user.steamid === userDecks.steamId">
 				My Decks
 		  </span>
-		  <span ng-show="!root.user.user.steamid || (root.user.user.steamid && root.user.user.steamid !== userDecks.decks[0].author.steamId)">
+		  <span ng-show="!root.user.user.steamid || (root.user.user.steamid && root.user.user.steamid !== userDecks.steamId)">
 		  	  <span ng-show="userDecks.decks[0].author.name">
 				  Decks By {{userDecks.decks[0].author.name}}
 			  </span>
