@@ -8,10 +8,22 @@
  * Controller of the faeriadecks2App
  */
 angular.module('faeriadecks2App')
-	.controller('HomepageCtrl', function(Deck, Cards, DiscusComments) {
+	.controller('HomepageCtrl', function(Deck, Cards, DiscusComments, User, $scope) {
 		var vm = this;
 		this.recentDecks = Deck.list();
 		this.topDecks = Deck.topList();
+		$scope.user = User.get();
+
+		$scope.$watch('user', function() {
+			if ($scope.user.user && $scope.user.user.steamid && !vm.myDecks) {
+				Deck.byUser({
+					steamid: this.user.user.steamid
+				}).$promise.then(function(data) {
+					vm.myDecks = data;
+				});
+			}
+		});
+
 
 		DiscusComments.onPromises([this.recentDecks.$promise, this.topDecks.$promise]);
 		this.cards = Cards.get();
