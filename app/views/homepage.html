@@ -34,7 +34,7 @@
 		              <img src="{{root.user.user.avatarmedium}}" class="userimg" />
 		            </md-button> My Decks
 				</h3>
-				<deck-item ng-repeat="deck in home.topDecks | limitTo:2 track by $index" deck="deck"></deck-item>
+				<deck-item ng-repeat="deck in home.myDecks | limitTo:2 track by $index" deck="deck"></deck-item>
 				<a href="/decks/by/{{root.user.user.steamid}}" class="more-link" style="text-align: right;">more</a>
 			</div>
 		
