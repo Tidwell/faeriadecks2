@@ -30,9 +30,9 @@
 
 			<div layout="column" flex-gt-xs="60" layout-padding ng-show="root.user.user.personaname" class="user-promo">
 				<h3 layout-padding>
-					<md-button class="md-fab" class="md-icon-button">
+					<md-button class="md-fab" class="md-icon-button" href="/decks/by/{{root.user.user.steamid}}">
 		              <img src="{{root.user.user.avatarmedium}}" class="userimg" />
-		            </md-button> My Decks
+		            </md-button> <a href="/decks/by/{{root.user.user.steamid}}">My Decks</a>
 				</h3>
 				<deck-item ng-repeat="deck in home.myDecks | orderBy:'-created' | limitTo:2 track by $index" deck="deck"></deck-item>
 				<strong ng-show="!home.myDecks.length">You haven't created any decks yet.</strong>
