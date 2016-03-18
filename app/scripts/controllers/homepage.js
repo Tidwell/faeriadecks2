@@ -15,7 +15,7 @@ angular.module('faeriadecks2App')
 		$scope.user = User.get();
 
 		$scope.$watch('user', function() {
-			if ($scope.user.user && $scope.user.user.steamid && !vm.myDecks) {
+			if ($scope.user && $scope.user.user && $scope.user.user.steamid && !vm.myDecks) {
 				Deck.byUser({
 					steamid: this.user.user.steamid
 				}).$promise.then(function(data) {

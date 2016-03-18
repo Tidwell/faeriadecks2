@@ -1,5 +1,5 @@
 #!/bin/bash
-grunt build-noimg
+#grunt build-noimg
 
 rm -r build/*;
 
@@ -10,8 +10,8 @@ cp -r src build;
 
 git checkout build/public/images
 
-cp app/images/steam.png build//public/images/
+#cp app/images/steam.png build//public/images/
 
-cd build;
+#cd build;
 
-node index.js;
+#node index.js;
