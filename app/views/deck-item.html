@@ -1,4 +1,4 @@
-<md-card layout="row">
+<md-card layout="row" class="decklisting-item">
 	<md-card-title>
 		<md-card-title-text layout="column" layout-align="space-between start">
 			<span class="md-headline">
@@ -24,7 +24,7 @@
 	</md-card-title>
 	<md-card-actions layout="column" layout-align="center end">
 	    <div layout="row">
-			<span ng-repeat="color in getColors(deck)" class="color {{color | lowercase}}"></span>
+			<span ng-repeat="color in getColors(deck)" class="color {{color | lowercase}}">{{maxColors(color,deck)}}</span>
 		</div>
 		
 

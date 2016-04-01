@@ -43,15 +43,15 @@
 	<md-tabs md-dynamic-height md-border-bottom>
 	<md-tab label="Top">
 	  <md-content class="md-padding">
-	    <div>
-	      <deck-item ng-repeat="deck in decks.topDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters track by $index" ng-show="deck.name" deck="deck"></deck-item>
+	    <div layout-wrap layout="row" layout-align="space-around center">
+	      <deck-item ng-repeat="deck in decks.topDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters track by $index" ng-show="deck.name" deck="deck" flex="100" flex-gt-sm="45"></deck-item>
 	    </div>
 	  </md-content>
 	</md-tab>
 	<md-tab label="Recent">
 	  <md-content class="md-padding">
-	    <div>
-	      <deck-item ng-repeat="deck in decks.recentDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters track by $index" deck="deck"></deck-item>
+	    <div layout-wrap layout="row" layout-align="space-around center">
+	      <deck-item ng-repeat="deck in decks.recentDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters track by $index" deck="deck" flex="100" flex-gt-sm="45"></deck-item>
 	    </div>
 	  </md-content>
 	</md-tab>

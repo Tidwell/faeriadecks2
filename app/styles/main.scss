@@ -244,6 +244,9 @@ md-input-container {
 .color.human {
 	width: 0;
 }
+.decklisting-item .color.human {
+	display: none;
+}
 
 md-tooltip.deck-card-tooltip > .md-content {
   width: 400px;
