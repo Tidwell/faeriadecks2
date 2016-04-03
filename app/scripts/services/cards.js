@@ -11,6 +11,10 @@ angular.module('faeriadecks2App')
 	.service('Cards', function Cards($http, $sce) {
 		var c = {};
 
+		function countLands(card) {
+			return card.deserts + card.mountains + card.islands + card.forests;
+		}
+
 		return {
 			get: function() {
 				if (!c.cards) {
@@ -22,6 +26,7 @@ angular.module('faeriadecks2App')
 							c.text = c.text.replace(/\_/g, ' ');
 							c.text = c.text.replace(/\|/g, ' ');
 							c.text = $sce.trustAsHtml(c.text);
+							c.landCount = countLands(c);
 						});
 						c.cards = d;
 					});

@@ -65,7 +65,7 @@
         md-gutter="12px" md-gutter-gt-sm="8px" class="cardlist">
 
         <md-grid-tile md-rowspan="1" md-colspan="1"
-          ng-repeat="card in main.cards.cards | orderBy: ['color', 'faeriaCost', 'name'] | filter:main.searchText | colorFilter:main.colorFilters | typeFilter:main.typeFilters"
+          ng-repeat="card in main.cards.cards | orderBy: ['color', 'faeriaCost', 'landCount', 'name'] | filter:main.searchText | colorFilter:main.colorFilters | typeFilter:main.typeFilters"
           class="card-selectable"
           ng-click="main.add(card)"
           ng-if="!card.uncollectable">
