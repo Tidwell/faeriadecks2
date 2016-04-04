@@ -1,7 +1,7 @@
 <div layout="column" ng-cloak class="decklisting" layout-padding>
 	<section layout="row" layout-wrap layout-align="space-around center">
 		<md-input-container>
-        <label>Search</label>
+        <label>Search by name, card, author, description</label>
         <input ng-model="decks.searchText" />
       </md-input-container>
         <md-checkbox
@@ -34,34 +34,45 @@
             flex="none">
           Yellow
         </md-checkbox>
+
+        <md-input-container>
+            <label>Per-page</label>
+            <md-select ng-model="decks.perPage">
+                <md-option value="10">10</md-option>
+                <md-option value="20">20</md-option>
+                <md-option value="30">30</md-option>
+                <md-option value="40">40</md-option>
+                <md-option value="50">50</md-option>
+            </md-select>
+        </md-input-container>
+
+        <md-input-container>
+            <label>Sort by</label>
+            <md-select ng-model="decks.sort">
+                <md-option value="rating.average">highest rating</md-option>
+                <md-option value="created">most recent</md-option>
+            </md-select>
+        </md-input-container>
     </section>
     <div>
-    <br />
-    <md-divider hide-xs></md-divider>
-    <br />
+        <br />
+        <md-divider hide-xs></md-divider>
+        <br />
 	</div>
-	<md-tabs md-dynamic-height md-border-bottom>
-    	<md-tab label="Top">
-    	  <md-content class="md-padding">
-    	    <dir-pagination-controls template-url="/views/pagination.html" max-size="7" layout layout-align="center center" pagination-id="top"></dir-pagination-controls>
-            <div layout-wrap layout="row" layout-align="space-around center">
-    	      <deck-item dir-paginate="deck in decks.topDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters | itemsPerPage:20" deck="deck" flex="100" flex-gt-sm="45" pagination-id="top"></deck-item>
-    	    </div>
-            <dir-pagination-controls template-url="/views/pagination.html" max-size="7" layout layout-align="center center" pagination-id="top"></dir-pagination-controls>
-    	  </md-content>
-    	</md-tab>
-    	<md-tab label="Recent">
-    	  <md-content class="md-padding">
-            <dir-pagination-controls template-url="/views/pagination.html" max-size="7" layout layout-align="center center" pagination-id="recent"></dir-pagination-controls>
-    	    <div layout-wrap layout="row" layout-align="space-around center">
-    	      <deck-item dir-paginate="deck in decks.recentDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters | itemsPerPage:20" deck="deck" flex="100" flex-gt-sm="45" pagination-id="recent"></deck-item>
-    	    </div>
-            <dir-pagination-controls template-url="/views/pagination.html" max-size="7" layout layout-align="center center" pagination-id="recent"></dir-pagination-controls>
-    	  </md-content>
-    	</md-tab>
-	</md-tabs>
+	<div layout-padding>
+        <dir-pagination-controls template-url="/views/pagination.html" max-size="5" layout layout-align="center center" pagination-id="recent">
+        </dir-pagination-controls>
+        
+        <div layout-wrap layout="row" layout-align="space-around center">
+            <deck-item dir-paginate="deck in decks.recentDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters | orderBy:decks.sort:true | itemsPerPage:decks.perPage" deck="deck" flex="100" flex-gt-sm="45" pagination-id="recent">
+            </deck-item>
+        </div>
+        
+        <dir-pagination-controls template-url="/views/pagination.html" max-size="5" layout layout-align="center center" pagination-id="recent">
+        </dir-pagination-controls>
+    </div>
 
-	<div ng-show="!decks.topDecks.length">
+	<div ng-show="!decks.recentDecks.length">
 	  <md-content class="md-padding">
 	    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
 	  </md-content>

@@ -22,19 +22,21 @@
 			<span class="disqus-comment-count" data-disqus-url="http://www.faeriadecks.com/{{deck.url}}"></span>
 		</md-card-title-text>
 	</md-card-title>
+
 	<md-card-actions layout="column" layout-align="center end">
-	    <div layout="row">
+	    <div layout="row" layout-wrap layout-align="end center">
 			<span ng-repeat="color in getColors(deck)" class="color {{color | lowercase}}">{{maxColors(color,deck)}}</span>
-		</div>
-		
+		</div>	
 
 	    <md-button class="md-primary md-raised" href="/deckbuilder/{{deck.url}}"
 			 ng-show="user.user.steamid && user.user.steamid == deck.author.steamId">
 			<i class="fa fa-pencil"></i> Edit
 		</md-button>
+
 		<md-button aria-label="Fork" class="md-raised md-primary" href="/deckbuilder/{{deck.url}}"
 			ng-show="showCopy && (!user.user.steamid || user.user.steamid != deck.author.steamId)">
 			<i class="fa fa-code-fork"></i> Create Copy
 	    </md-button>
+
 	</md-card-actions>
 </md-card>

@@ -1,0 +1,37 @@
+.pagination-control {
+    font-size: 16px;
+    margin: 20px 0;
+    padding: 3px 15px 3px 15px;
+    color: rgb(49, 46, 46);
+    text-transform: none;
+    font-weight: 400;
+    min-width:100px;
+}
+.pagination-control.md-button.left {
+    border-radius: 10px 0 0 10px;
+    margin-right: -3px;
+}
+.pagination-control.md-button.middle {
+    border-radius: 0;
+    border-left: 1px solid rgba(230, 230, 230, 0.96);
+    border-right: 1px solid rgba(230, 230, 230, 0.96);
+}
+.pagination-control.md-button.right {
+    border-radius: 0 10px 10px 0;
+    margin-left: -3px;
+}
+.pagination-control.md-button:not([disabled]):hover {
+    color: rgba(44, 65, 164, 0.96);
+    transition: 0.3s;
+}
+.pagination .md-button {
+    margin-right: 0;
+    margin-left: 0;
+    min-width: 30px;
+}
+.pagination .md-button.active,
+.pagination .md-button.active:hover {
+    background-color: #428bca;
+    border-color: #428bca;
+    cursor: default;
+}
