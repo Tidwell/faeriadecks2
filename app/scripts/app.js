@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngCookies',
     'angularMoment',
-    'angularUtils.directives.dirDisqus'
+    'angularUtils.directives.dirDisqus',
+    'angularUtils.directives.dirPagination'
   ])
   .config(function($routeProvider, $locationProvider, $mdThemingProvider) {
     $routeProvider

@@ -41,22 +41,25 @@
     <br />
 	</div>
 	<md-tabs md-dynamic-height md-border-bottom>
-	<md-tab label="Top">
-	  <md-content class="md-padding">
-	    <div layout-wrap layout="row" layout-align="space-around center">
-	      <deck-item ng-repeat="deck in decks.topDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters track by $index" ng-show="deck.name" deck="deck" flex="100" flex-gt-sm="45"></deck-item>
-	    </div>
-	  </md-content>
-	</md-tab>
-	<md-tab label="Recent">
-	  <md-content class="md-padding">
-	    <div layout-wrap layout="row" layout-align="space-around center">
-	      <deck-item ng-repeat="deck in decks.recentDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters track by $index" deck="deck" flex="100" flex-gt-sm="45"></deck-item>
-	    </div>
-	  </md-content>
-	</md-tab>
+    	<md-tab label="Top">
+    	  <md-content class="md-padding">
+    	    <dir-pagination-controls template-url="/views/pagination.html" max-size="7" layout layout-align="center center" pagination-id="top"></dir-pagination-controls>
+            <div layout-wrap layout="row" layout-align="space-around center">
+    	      <deck-item dir-paginate="deck in decks.topDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters | itemsPerPage:20" deck="deck" flex="100" flex-gt-sm="45" pagination-id="top"></deck-item>
+    	    </div>
+            <dir-pagination-controls template-url="/views/pagination.html" max-size="7" layout layout-align="center center" pagination-id="top"></dir-pagination-controls>
+    	  </md-content>
+    	</md-tab>
+    	<md-tab label="Recent">
+    	  <md-content class="md-padding">
+            <dir-pagination-controls template-url="/views/pagination.html" max-size="7" layout layout-align="center center" pagination-id="recent"></dir-pagination-controls>
+    	    <div layout-wrap layout="row" layout-align="space-around center">
+    	      <deck-item dir-paginate="deck in decks.recentDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters | itemsPerPage:20" deck="deck" flex="100" flex-gt-sm="45" pagination-id="recent"></deck-item>
+    	    </div>
+            <dir-pagination-controls template-url="/views/pagination.html" max-size="7" layout layout-align="center center" pagination-id="recent"></dir-pagination-controls>
+    	  </md-content>
+    	</md-tab>
 	</md-tabs>
-
 
 	<div ng-show="!decks.topDecks.length">
 	  <md-content class="md-padding">

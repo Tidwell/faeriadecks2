@@ -51,12 +51,4 @@ angular.module('faeriadecks2App')
 			});
 			return colors;
 		};
-
-		this.deckCardCount = function(deck) {
-			var total = 0;
-			deck.deck.forEach(function(c) {
-				total += c.copies
-			});
-			return total;
-		};
 	});

@@ -8,7 +8,7 @@
 		      <md-button class="md-fab md-mini" href="/decks/by/{{deck.author.steamId}}"
 		      	aria-label="Decks by {{deck.author.name}}"
 		      	ng-show="showUserImg && deck.author.name">
-		      	<img src="{{deck.author.image}}" />
+		      	<img ng-src="{{deck.author.image}}" />
 		      </md-button>
 		      <strong ng-show="deck.author.name">By <a href="/decks/by/{{deck.author.steamId}}">{{deck.author.name}}</a></strong> <span am-time-ago="deck.created"></span>
 		    </span>

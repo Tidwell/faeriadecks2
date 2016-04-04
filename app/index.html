@@ -70,7 +70,7 @@
     <div ng-show="root.user.user.personaname">
         <md-menu>
           <md-button class="md-fab" aria-label="Open User Menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
-            <img src="{{root.user.user.avatarmedium}}" class="userimg" />
+            <img ng-src="{{root.user.user.avatarmedium}}" class="userimg" />
           </md-button>
           <md-menu-content width="6">
             <md-menu-item>
@@ -118,6 +118,7 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/angular-moment/angular-moment.js"></script>
     <script src="bower_components/angular-utils-disqus/dirDisqus.js"></script>
+    <script src="bower_components/angular-utils-pagination/dirPagination.js"></script>
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
@@ -145,7 +146,8 @@
     <script src="scripts/filters/fulldecks.js"></script>
     <script src="scripts/filters/type.js"></script>
     <script src="scripts/filters/deck-color.js"></script>
-  <script src="scripts/services/discus-comments.js"></script>
+    <script src="scripts/services/discus-comments.js"></script>
+  <script src="scripts/filters/hasname.js"></script>
   <!-- endbuild -->
   <script id="dsq-count-scr" src="//faeriadecks.disqus.com/count.js" async></script>
 
