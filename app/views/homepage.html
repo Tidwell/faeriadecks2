@@ -34,7 +34,7 @@
 		              <img ng-src="{{root.user.user.avatarmedium}}" class="userimg" />
 		            </md-button> <a href="/decks/by/{{root.user.user.steamid}}">My Decks</a>
 				</h3>
-				<deck-item ng-repeat="deck in home.myDecks | orderBy:'-created' | limitTo:3 track by $index" deck="deck"></deck-item>
+				<deck-item ng-repeat="deck in home.myDecks | orderBy:'-created' | limitTo:2 track by $index" deck="deck"></deck-item>
 				<strong ng-show="!home.myDecks.length">You haven't created any decks yet.</strong>
 				<a href="/decks/by/{{root.user.user.steamid}}" class="more-link" style="text-align: right;">more</a>
 			</div>
