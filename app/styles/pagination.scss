@@ -1,6 +1,9 @@
+.pagination {
+    margin: 0;
+}
 .pagination-control {
     font-size: 16px;
-    margin: 20px 0;
+    margin: 0;
     padding: 3px 15px 3px 15px;
     color: rgb(49, 46, 46);
     text-transform: none;
@@ -34,4 +37,32 @@
     background-color: #428bca;
     border-color: #428bca;
     cursor: default;
+}
+
+
+dir-pagination-controls {
+    margin: 0 8px;
+}
+.decklisting md-divider {
+    margin: 1em 0;
+}
+
+.deck-total {
+    text-align: center;
+    padding: 0 1em 0 2em;
+}
+
+@media (max-width: 600px) {
+    .pagination .md-button {
+        padding: 3px 5px 3px;
+        min-width: 25px;
+    }
+
+    .deck-total {
+        padding: 0 0 0 2em;
+    }
+
+    dir-pagination-controls {
+        margin: 0;
+    }
 }

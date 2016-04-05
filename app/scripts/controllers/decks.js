@@ -25,4 +25,5 @@ angular.module('faeriadecks2App')
 		};
 		vm.perPage = 30;
 		vm.sort = 'rating.average';
+		vm.includeUntitled = true;
 	});
