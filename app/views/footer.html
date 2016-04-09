@@ -1,6 +1,8 @@
 <div layout="row" layout-xs="column" layout-align="center" layout-padding class="">
 	<a href="/">Home</a>
 	<a hide-xs>|</a>
+	<a href="/decks/by/{{root.user.user.steamid}}" ng-show="root.user.user.personaname">My Decks</a>
+	<a hide-xs ng-show="root.user.user.personaname">|</a>
 	<a href="/deckbuilder">Deckbuilder</a>
 	<a hide-xs>|</a>
 	<a href="/decks/browse">Search Decks</a>

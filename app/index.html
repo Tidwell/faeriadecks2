@@ -26,48 +26,45 @@
 </head>
 <body ng-app="faeriadecks2App" ng-cloak ng-controller="RootCtrl as root">
 
-  <md-fab-toolbar md-direction="left" md-open="true">
-    <md-fab-trigger class="align-with-text">
-      <md-button aria-label="menu" class="md-fab md-primary">
-        <md-icon><i class="fa fa-bars fa-2x"></i></md-icon>
+
+  <md-sidenav
+    class="md-sidenav-right mainnav"
+    md-component-id="left"
+    md-disable-backdrop
+    md-whiteframe="4">
+  <md-toolbar class="md-theme-indigo">
+    <a class="" href="/">
+      <img src="/images/logo.png" style="width: 100%"/>
+    </a>
+  </md-toolbar>
+  <md-content layout-padding layout="column">    
+      <md-button aria-label="Builder" class="md-button" href="/" ng-click="root.close()">
+        Home
       </md-button>
-    </md-fab-trigger>
-    <md-toolbar>
-      <md-fab-actions class="md-toolbar-tools">
-        <a hide-xs>
-          <md-button aria-label="home" class="md-button">
-            <img src="/images/logo.png" style="height: 100%"/>
-          </md-button>
+
+      <md-button aria-label="Builder" class="md-button" href="/deckbuilder" ng-click="root.close()">
+        Deckbuilder
+      </md-button>
+
+      <md-button aria-label="browse" class="md-button" href="/decks/browse" ng-click="root.close()">
+        Search Decks
+      </md-button>
+      <div ng-show="!root.user.user.personaname" style="text-align: center;">
+        <a href="/auth/steam" target="_self">
+          <img src="/images/steam.png" style="margin-top: 1.5em;"/>
         </a>
+      </div>
+      <md-button href="/decks/by/{{root.user.user.steamid}}" target="_self" ng-show="root.user.user.personaname">
+        My Decks
+      </md-button>
+  </md-content>
+</md-sidenav>
 
-        
-          <md-button aria-label="Builder" class="md-button" href="/">
-            Home
-          </md-button>
-
-
-
-          <md-button aria-label="Builder" class="md-button" href="/deckbuilder">
-            Deckbuilder
-          </md-button>
-
-
-
-          <md-button aria-label="browse" class="md-button" href="/decks/browse">
-            Search Decks
-          </md-button>
-
-
-      </md-fab-actions>
-    </md-toolbar>
-  </md-fab-toolbar>
+    <md-button aria-label="menu" class="md-fab md-primary menu-toggler" ng-click="root.toggleLeft()">
+      <md-icon><i class="fa fa-bars fa-2x"></i></md-icon>
+    </md-button>
 
   <div class="user-bar">
-    <div ng-show="!root.user.user.personaname">
-      <a href="/auth/steam" target="_self">
-        <img src="/images/steam.png" style="margin-top: 1.5em;"/>
-      </a>
-    </div>
     <div ng-show="root.user.user.personaname">
         <md-menu>
           <md-button class="md-fab" aria-label="Open User Menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">

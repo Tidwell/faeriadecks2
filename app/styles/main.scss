@@ -20,32 +20,21 @@ md-content, md-sidenav {
 .deckview,
 .tos,
 .userdecks {
-  padding-top: 5em;
 }
 .decklisting {
-	padding-top: 8em;
 }
-md-fab-toolbar {
+.md-button.md-fab.menu-toggler {
 	top: 0;
 	right: 0;
-	position: absolute;
-    pointer-events: none;
-    z-index: 100;
-    width: 100%;
-}
-md-fab-toolbar.md-is-open {
-	pointer-events: auto;
-}
-md-fab-toolbar md-fab-trigger {
-	pointer-events: auto;
-}
-md-fab-toolbar:not(.md-is-open) md-fab-trigger button {
+	position: fixed;
+    z-index: 1000;
     opacity: .5;
 }
-md-fab-toolbar:not(.md-is-open) md-fab-trigger:focus button,
-md-fab-toolbar:not(.md-is-open) md-fab-trigger:active button,
-md-fab-toolbar:not(.md-is-open) md-fab-trigger:hover button {
+.menu-toggler:hover, .menu-toggler:focus, .menu-toggler:active {
 	opacity: 1;
+}
+.md-sidenav-right.mainnav {
+	z-index: 1200;
 }
 .hidden {
   display: none;
@@ -236,6 +225,16 @@ md-input-container {
 	md-tooltip.deck-card-tooltip > .md-content {
 		display: none;
 	}
+
+	.md-sidenav-right.md-whiteframe-z2.decklist {
+		z-index: 1500;
+	}
+}
+
+@media (min-width: 1000px) {
+	.md-headline {
+	    font-size: 2em;
+	}
 }
 .decklisting p span.color {
 	float: left;
@@ -342,7 +341,4 @@ md-card {
 }
 md-card md-card-title {
 	padding-top: .5em;
-}
-.md-headline {
-	font-size: 2em;
 }

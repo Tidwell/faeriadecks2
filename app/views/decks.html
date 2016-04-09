@@ -1,11 +1,11 @@
 <div layout="column" ng-cloak class="decklisting" layout-padding>
     <div>
         <div layout="row" layout-wrap layout-align="space-around center">
-            <md-input-container flex="25">
+            <md-input-container flex="25" flex-xs="100">
                 <label>Search by name, card, author, description</label>
                 <input ng-model="decks.searchText" />
             </md-input-container>
-            <md-input-container flex="20" class="non-search">
+            <md-input-container flex="20" class="non-search" flex-xs="50">
                 <label>Per-page</label>
                 <md-select ng-model="decks.perPage">
                     <md-option value="10">10</md-option>
@@ -16,7 +16,7 @@
                 </md-select>
             </md-input-container>
 
-            <md-input-container flex="20" class="non-search">
+            <md-input-container flex="20" class="non-search" flex-xs="50">
                 <label>Sort by</label>
                 <md-select ng-model="decks.sort">
                     <md-option value="rating.average">highest rating</md-option>
