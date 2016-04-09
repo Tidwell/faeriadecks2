@@ -14,9 +14,7 @@ angular.module('faeriadecks2App')
 		this.toggleLeft = buildDelayedToggler('left');
 
 		this.close = function() {
-			console.log('close')
-			vm.toggleLeft();
-			
+			vm.toggleLeft();			
 		};
 
 		function debounce(func, wait, context) {
