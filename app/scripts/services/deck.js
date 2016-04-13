@@ -30,6 +30,9 @@ angular.module('faeriadecks2App')
 				} else {
 					deck.voteScore = 0;
 				}
+				if (!deck.created) {
+					deck.created = 1456224170810;
+				}
 			});
 			return data;
 		}
