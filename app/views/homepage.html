@@ -23,7 +23,7 @@
 					<md-list style="font-weight: bold;" layout="column">
 						<md-list-item><i class="fa fa-user"></i> Claim Your Creations</md-list-item>
 						<md-list-item><i class="fa fa-pencil"></i> Make Updates &amp; Revisions</md-list-item>
-						<md-list-item><i class="fa fa-comment"></i> Add Notes &amp; Comments</md-list-item>
+						<md-list-item><i class="fa fa-check"></i> Vote for Decks</md-list-item>
 					</md-list>
 				</md-card-content>
 			</md-card>
@@ -43,8 +43,8 @@
 
 	<div layout="row" layout-xs="column" layout-sm="column" layout-align="stretch center" class="decklists-container" layout-padding>
 		<div flex>
-			<h3 layout-padding>Top Meta Upvotes</h3>
-			<deck-item ng-repeat="deck in home.topDecks | fullDecks | limitTo:10 track by $index" deck="deck"></deck-item>
+			<h3 layout-padding>Top Upvotes</h3>
+			<deck-item ng-repeat="deck in home.topDecks | fullDecks | orderBy:['-voteScore', 'created'] | limitTo:10 track by $index" deck="deck"></deck-item>
 			<a href="/decks/browse" class="more-link">more</a>
 		</div>
 		<div flex>

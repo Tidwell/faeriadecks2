@@ -118,7 +118,6 @@ angular.module('faeriadecks2App')
 				vm.deckUrl = deck.url;
 				vm.deck = deck.deck;
 				vm.rawDeck = deck;
-				vm.deckRating = deck.rating.average;
 				var count = 0;
 				vm.deck.forEach(function(card) {
 					count += card.copies;
@@ -168,16 +167,6 @@ angular.module('faeriadecks2App')
 			vm.totalCards = 0;
 			vm.deckName = '';
 			vm.deckUrl = '';
-		};
-
-		vm.submitRating = function(rate) {
-			vm.hasRated = true;
-			Deck.rate({
-				rating: rate,
-				id: vm.deckUrl
-			}).$promise.then(function(){
-				$cookies.put(vm.deckUrl, rate);
-			});
 		};
 
 		vm.showDeck = function() {

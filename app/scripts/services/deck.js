@@ -25,7 +25,11 @@ angular.module('faeriadecks2App')
 		function addColors(data) {
 			data.forEach(function(deck){
 				deck.colors = getColors(deck);
-				deck.voteScore = deck.metaVotes.upvotes-deck.metaVotes.downvotes;
+				if (deck.metaVotes) {
+					deck.voteScore = deck.metaVotes.upvotes-deck.metaVotes.downvotes;
+				} else {
+					deck.voteScore = 0;
+				}
 			});
 			return data;
 		}
