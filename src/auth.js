@@ -96,7 +96,7 @@ function configureApp(app) {
 //   login page.
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
-  res.send(400);
+  res.sendStatus(400);
 }
 
 module.exports = configureApp;

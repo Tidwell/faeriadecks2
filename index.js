@@ -12,6 +12,10 @@ var path = require('path');
 
 app.use(express.static(path.join(__dirname , config.appDir)));
 
+if (config.localConfigFunc) {
+	config.localConfigFunc(app);
+}
+
 var mongoose   = require('mongoose');
 mongoose.connect(config.mongo); // connect to our database
 var Deck = require('./src/deck-model');
@@ -30,7 +34,7 @@ var router = express.Router(); // get an instance of the express Router
 
 
 router.get('/decks/top', function(req, res) {
-	var q = Deck.find({}, {}, { sort: { 'rating.average' : -1, 'created' : -1 } })
+	var q = Deck.find({}, {}, { sort: { 'created' : -1 } })
 	q.limit(800).exec(function(err,decks){
 		if (err) { return res.sendStatus(400).send(err); }
 		return res.json(decks);
@@ -43,6 +47,47 @@ router.post('/decks/:url/rate/:rating', function(req,res){
 	Deck.findOne({url: req.params.url}, function(err,deck){
 		if (err || !deck) { return res.sendStatus(404); }
 		deck.addRating(Number(req.params.rating));
+		deck.save(function(err,deck){
+			if (err || !deck) { return res.sendStatus(404); }
+			res.json(deck);
+		});
+	});
+});
+
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) { return next(); }
+  res.sendStatus(400);
+}
+router.post('/decks/:url/upvote', ensureAuthenticated, function(req,res){
+	if (!req.params.url) { return res.sendStatus(400); }
+
+	Deck.findOne({url: req.params.url}, function(err,deck){
+		if (err || !deck) { return res.sendStatus(404); }
+		deck.upvote(req.user.id);
+		deck.save(function(err,deck){
+			if (err || !deck) { return res.sendStatus(404); }
+			res.json(deck);
+		});
+	});
+});
+router.post('/decks/:url/downvote', ensureAuthenticated, function(req,res){
+	if (!req.params.url) { return res.sendStatus(400); }
+
+	Deck.findOne({url: req.params.url}, function(err,deck){
+		if (err || !deck) { return res.sendStatus(404); }
+		deck.downvote(req.user.id);
+		deck.save(function(err,deck){
+			if (err || !deck) { return res.sendStatus(404); }
+			res.json(deck);
+		});
+	});
+});
+router.post('/decks/:url/unvote', ensureAuthenticated, function(req,res){
+	if (!req.params.url) { return res.sendStatus(400); }
+
+	Deck.findOne({url: req.params.url}, function(err,deck){
+		if (err || !deck) { return res.sendStatus(404); }
+		deck.unvote(req.user.id);
 		deck.save(function(err,deck){
 			if (err || !deck) { return res.sendStatus(404); }
 			res.json(deck);
