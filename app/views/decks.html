@@ -67,7 +67,7 @@
         </div>
         
         <div layout-wrap layout="row" layout-align="space-around center">
-            <deck-item dir-paginate="deck in decks.recentDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters | orderBy:decks.sort:true | itemsPerPage:decks.perPage" deck="deck" flex="100" flex-gt-sm="45" pagination-id="recent">
+            <deck-item dir-paginate="deck in decks.recentDecks | fullDecks | filter:decks.searchText | deckColorFilter:decks.colorFilters | orderBy:[decks.sort, '-name']:true | itemsPerPage:decks.perPage" deck="deck" flex="100" flex-gt-sm="45" pagination-id="recent">
             </deck-item>
         </div>
         <div layout="row" layout-align="center center" layout-align-gt-sm="end center" layout-padding>

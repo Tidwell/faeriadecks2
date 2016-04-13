@@ -44,7 +44,7 @@
 	<div layout="row" layout-xs="column" layout-sm="column" layout-align="stretch center" class="decklists-container" layout-padding>
 		<div flex>
 			<h3 layout-padding>Top Upvotes</h3>
-			<deck-item ng-repeat="deck in home.topDecks | fullDecks | orderBy:['-voteScore', 'created'] | limitTo:10 track by $index" deck="deck"></deck-item>
+			<deck-item ng-repeat="deck in home.topDecks | fullDecks | orderBy:['-voteScore', '-created'] | limitTo:10 track by $index" deck="deck"></deck-item>
 			<a href="/decks/browse" class="more-link">more</a>
 		</div>
 		<div flex>
