@@ -9,6 +9,9 @@ md-content, md-sidenav {
 	background: #fff;
 	background-color: #fff;
 }
+.decklisting {
+	padding-top: 2.5em;
+}
 .decklisting,
 .deckbuilder,
 .tos {
@@ -314,10 +317,14 @@ md-card-actions {
 }
 
 .user-bar {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 5em;
 	z-index: 90;
+	opacity: .75;
+}
+.user-bar:hover, .user-bar:focus, .user-bar:active {
+	opacity: 1;
 }
 .userimg,
 .deckview .profile-img img {
@@ -341,4 +348,23 @@ md-card {
 }
 md-card md-card-title {
 	padding-top: .5em;
+}
+
+.metavote {
+	text-align: center;
+	margin: 0 0 0 1em;
+	color: #ccc;
+	font-weight: bold;
+}
+.metavote i {
+	cursor: pointer;
+	outline: none;
+}
+
+.metavote.upvote i.up {
+	color: rgb(3,169,244);
+}
+
+.metavote.downvote i.down {
+	color: red;
 }

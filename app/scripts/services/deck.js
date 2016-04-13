@@ -25,6 +25,7 @@ angular.module('faeriadecks2App')
 		function addColors(data) {
 			data.forEach(function(deck){
 				deck.colors = getColors(deck);
+				deck.voteScore = deck.metaVotes.upvotes-deck.metaVotes.downvotes;
 			});
 			return data;
 		}
@@ -36,7 +37,9 @@ angular.module('faeriadecks2App')
 		}, {
 			list: { method: 'GET', isArray: true, transformResponse: [angular.fromJson, addColors] },
 			topList: { method: 'GET', isArray: true, url: APIDomain + '/api/decks/top', transformResponse: [angular.fromJson, addColors] },
-			rate: { method: 'POST', url: APIDomain + '/api/decks/:deckId/rate/:rating' },
+			upvote: { method: 'POST', url: APIDomain + '/api/decks/:deckId/upvote' },
+			downvote: { method: 'POST', url: APIDomain + '/api/decks/:deckId/downvote' },
+			unvote: { method: 'POST', url: APIDomain + '/api/decks/:deckId/unvote' },
 			byUser: { method: 'GET', isArray: true, url: APIDomain + '/api/decks/by/:steamid', transformResponse: [angular.fromJson, addColors] }
 		});
 
