@@ -24,7 +24,8 @@ var DeckSchema = new Schema({
 		steamId: String,
 		name: String,
 		image: String
-	}
+	},
+	tags: [String]
 }, {
 	toObject: {
 		virtuals: true

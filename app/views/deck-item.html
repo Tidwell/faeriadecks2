@@ -20,6 +20,9 @@
 				      <strong ng-show="deck.author.name">By <a href="/decks/by/{{deck.author.steamId}}">{{deck.author.name}}</a></strong> <span am-time-ago="deck.created"></span>
 				  </div>
 			    </span>
+				<md-chips ng-model="deckTags"
+			        readonly="true">
+				</md-chips>
 				<span class="disqus-comment-count" data-disqus-url="http://www.faeriadecks.com/{{deck.url}}"></span>
 			</md-card-title-text>
 		</md-card-title>

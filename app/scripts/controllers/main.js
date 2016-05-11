@@ -12,6 +12,25 @@ angular.module('faeriadecks2App')
 		var user = User.get();
 		var vm = this;
 
+		vm.validTags = [
+			{name:'aggro'},
+			{name:'control'},
+			{name:'midrange'},
+			{name:'combo'},
+			{name:'ladder'},
+			{name:'tournament'},
+			{name:'meta'},
+			{name:'godrank'},
+			{name:'brew'},
+			{name:'fun'},
+			{name:'experimental'},
+			{name:'casual'},
+			{name:'weird'},
+			{name:'streamer'},
+			{name:'multi-colored'},
+			{name:'mono-colored'}
+		];
+
 		vm.hasRated = false;
 		vm.cards = Cards.get();
 		vm.deck = [];
@@ -19,6 +38,8 @@ angular.module('faeriadecks2App')
 		vm.deckName = '';
 		vm.deckUrl = '';
 		vm.deckNotes = '';
+		vm.tags = [];
+		vm.tagsReadonly = false;
 
 		vm.colorFilters = {
 			human: true,
@@ -118,6 +139,7 @@ angular.module('faeriadecks2App')
 				vm.deckUrl = deck.url;
 				vm.deck = deck.deck;
 				vm.rawDeck = deck;
+				vm.tags = deck.tags ? deck.tags.map(function(t){return {name: t}; }) : [];
 				var count = 0;
 				vm.deck.forEach(function(card) {
 					count += card.copies;
@@ -135,12 +157,16 @@ angular.module('faeriadecks2App')
 
 		vm.save = function() {
 			var d;
+			var reduceTags = vm.tags.map(function(t){
+				return t.name;
+			});
 			if (user.user && vm.deckUrl && vm.deckAuthor && vm.deckAuthor.steamId === user.user.steamid) {
 				d = new Deck(vm.rawDeck);
 				d.name = vm.deckName;
 				d.deck = vm.deck;
 				d.notes = vm.deckNotes;
 				d.id = vm.deckUrl;
+				d.tags = reduceTags;
 				d.$save().then(function(deck) {
 					$location.path('/' + deck.url);
 				});
@@ -151,7 +177,8 @@ angular.module('faeriadecks2App')
 			d = new Deck({
 				name: vm.deckName,
 				deck: vm.deck,
-				notes: vm.deckNotes
+				notes: vm.deckNotes,
+				tags: reduceTags
 			});
 			d.$save().then(function(deck) {
 				$location.path('/' + deck.url);

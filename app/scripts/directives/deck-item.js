@@ -17,6 +17,12 @@ angular.module('faeriadecks2App')
 				showCopy: '='
 			},
 			link: function postLink(scope, element, attrs) {
+
+				
+
+				scope.$watch('deck.tags', function() {
+					scope.deckTags = scope.deck && scope.deck.tags ? scope.deck.tags.slice(0, 3) : [];	
+				});
 				Cards.get();
 				scope.getColors = function(deck) {
 					if (!deck || !deck.deck) { return []; }

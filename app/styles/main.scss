@@ -250,6 +250,10 @@ md-input-container {
 	display: none;
 }
 
+.decklisting-item md-chips .md-chips {
+	box-shadow: none;
+}
+
 .decklisting .non-search {
 	margin-bottom: 20px;
 }

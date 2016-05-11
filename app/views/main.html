@@ -106,7 +106,6 @@
       <p class="error" ng-show="main.error">
         {{main.error}}
       </p>
-
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="Deck ({{main.totalCards}})">
           <md-content class="md-padding">
@@ -130,8 +129,21 @@
               <stats deck="main.deck"></stats>
           </md-content>
         </md-tab>
-        <md-tab label="Notes">
+        <md-tab label="Info">
           <md-content class="md-padding">
+              <div class="autocomplete">
+                <md-contact-chips
+                  ng-model="main.tags"
+                  readonly="main.tagsReadonly"
+                  placeholder="Add Some Tags!"
+                  delete-button-label="Remove Tag"
+                  delete-hint="Press delete to remove tag"
+                  secondary-placeholder="+Tag"
+                  md-contacts="main.validTags"
+                  md-contact-name="name"
+                  md-require-match="true"></md-contact-chips>
+              </div>
+              <br /><br />
               <md-input-container class="md-block">
                 <label>Notes</label>
                 <textarea ng-model="main.deckNotes" md-maxlength="10000" rows="10" md-select-on-focus></textarea>
