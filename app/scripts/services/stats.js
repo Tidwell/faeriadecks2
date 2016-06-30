@@ -9,6 +9,23 @@
  */
 angular.module('faeriadecks2App')
 	.service('Stats', function Stats(Cards) {
+		function singleAverageStat(stat, deck) {
+			var amnt = 0;
+			var cards = 0;
+			deck.forEach(function(c) {
+				var fullCard = Cards.getById(c.id);
+				if (!fullCard) { console.log('find', c.id); return; }
+				if (fullCard[stat]) {
+					amnt += fullCard[stat] * c.copies;
+					cards += c.copies;
+				}
+			});
+			if (isNaN(amnt) || isNaN(cards) || !amnt || !cards) {
+				return 0;
+			}
+			return Math.floor((amnt / cards) * 100) / 100;
+		}
+
 		function averageStat(stat, conditionalStat, value, deck) {
 			//when we just pass a stat to avg and the deck
 			if (typeof conditionalStat === 'object') { deck = conditionalStat; }
@@ -62,6 +79,7 @@ angular.module('faeriadecks2App')
 
 		return {
 			averageStat: averageStat,
+			singleAverageStat: singleAverageStat,
 			countStatValue: countStatValue,
 			highestStat: highestStat
 		};

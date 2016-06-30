@@ -7,7 +7,7 @@
  * # deckItem
  */
 angular.module('faeriadecks2App')
-	.directive('deckItem', function(Cards, User, Deck, $mdDialog) {
+	.directive('deckItem', function(Cards, User, Deck, $mdDialog, DeckColor) {
 		return {
 			templateUrl: '/views/deck-item.html',
 			restrict: 'E',
@@ -18,41 +18,16 @@ angular.module('faeriadecks2App')
 			},
 			link: function postLink(scope, element, attrs) {
 				Cards.get();
-				scope.getColors = function(deck) {
-					if (!deck || !deck.deck) { return []; }
-					var colors = [];
-					deck.deck.forEach(function(c){
-						var card = Cards.getById(c.id);
-						if (!card) { console.log('find', c.id); return []; }
-						if (colors.indexOf(card.color) === -1 && card.color) {
-							colors.push(card.color);
-						}
-					});
-					return colors;
-				};
+				
+				scope.getColors = DeckColor.deckColors;
+
 				scope.hasRated = function(url) {
 					if ($cookies.get(url)) { return true; }
 					return false;
 				};
 
-				var typeMap = {
-					YELLOW: 'deserts',
-					BLUE: 'islands',
-					GREEN: 'forests',
-					RED: 'mountains'
-				};
-				scope.maxColors = function(color,deck) {
-					if (!deck || !deck.deck) { return 0; }
-					var curMax = 0;
-					deck.deck.forEach(function(c){
-						var card = Cards.getById(c.id);
-						if (!card) { console.log('find', c.id); return 0; }
-						if (card.color && card.color === color && typeMap[color] && card[typeMap[color]] > curMax) {
-							curMax = card[typeMap[color]];
-						}
-					});
-					return curMax;
-				};
+				
+				scope.maxColors = DeckColor.maxOfColor;
 
 				scope.myVote = '';
 				scope.vote = function(vote, url) {

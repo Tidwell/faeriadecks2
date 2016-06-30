@@ -38,17 +38,4 @@ angular.module('faeriadecks2App')
 			});
 			return toRet;
 		};
-
-		this.getColors = function(deck) {
-			if (!deck || !deck.deck) { return []; }
-			var colors = [];
-			deck.deck.forEach(function(c){
-				var card = vm.getById(c.id);
-				if (!card) { console.log('find', c.id); return; }
-				if (colors.indexOf(card.color) === -1) {
-					colors.push(card.color);
-				}
-			});
-			return colors;
-		};
 	});

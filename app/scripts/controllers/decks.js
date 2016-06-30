@@ -17,11 +17,11 @@ angular.module('faeriadecks2App')
 		this.cards = Cards.get();
 
 		vm.colorFilters = {
-			human: true,
-			green: true,
-			yellow: true,
-			blue: true,
-			red: true
+			HUMAN: true,
+			GREEN: true,
+			YELLOW: true,
+			BLUE: true,
+			RED: true
 		};
 		vm.perPage = 30;
 		vm.sort = 'voteScore';
