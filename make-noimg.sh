@@ -1,5 +1,5 @@
 #!/bin/bash
-grunt build
+grunt build-noimg
 
 rm -r build/*;
 
@@ -8,7 +8,7 @@ cp index.js build;
 cp package.json build;
 cp -r src build;
 
-#git checkout build/public/images
+git checkout build/public/images
 
 #cd build;
 

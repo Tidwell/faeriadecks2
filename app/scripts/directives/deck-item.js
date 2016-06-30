@@ -75,7 +75,7 @@ angular.module('faeriadecks2App')
 				scope.user = User.get();
 
 				function fixVote() {
-					if (scope.deck && scope.user.user && scope.user.user.steamid) {
+					if (scope.deck && scope.user.user && scope.user.user.steamid && scope.deck && scope.deck.vote) {
 						if (scope.deck.vote.negative.indexOf(scope.user.user.steamid) !== -1) {
 							scope.myVote = 'downvote';
 						}
