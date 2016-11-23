@@ -30,3 +30,9 @@ kill #PID
 nohup npm start &
 
 sudo service apache2 restart
+
+##Forever Deplot
+
+```bash
+ $ forever start index.js
+```
