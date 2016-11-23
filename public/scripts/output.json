@@ -86,7 +86,7 @@
     "text": "{gift} - Trigger all your production abilities.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -284,7 +284,7 @@
     "text": "Has +2/+0 during your turn.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -320,7 +320,7 @@
     "text": "Summon three 2/2 <b>Angry Yaks</b> with {haste}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -374,7 +374,7 @@
     "text": "{taunt} {combat} - Gain {faeria|1}.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -410,7 +410,7 @@
     "text": "{taunt} {gift} - A random creature in your hand gains +2/+2.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -428,7 +428,7 @@
     "text": "{taunt} {combat} - Draw a card.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -446,7 +446,7 @@
     "text": "The first time this creature fights another creature and survives, it gains +3/+3 and {charge|3}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -482,7 +482,7 @@
     "text": "{last_words} - Deal 2 damage to ALL creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -500,7 +500,7 @@
     "text": "{ranged_attack} Whenever this creature attacks, it gains +1/+0 afterwards.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -536,7 +536,7 @@
     "text": "Deal 1 damage to ALL creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -554,7 +554,7 @@
     "text": "{options|Draw a free Safeguard.|Draw a free Punishment.}: - Add a <b>Safeguard</b> to your hand. It costs {faeria|0}. - Add a <b>Punishment</b> to your hand. It costs {faeria|0}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -572,7 +572,7 @@
     "text": "{last_words} - Add an <b>Explore</b> to your hand.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -644,7 +644,7 @@
     "text": "Whenever you draw a card, gain +1/+0.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -680,7 +680,7 @@
     "text": "{protection}",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -716,7 +716,7 @@
     "text": "{gift} - Gain +2/+2 for each adjacent enemy creature.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -770,7 +770,7 @@
     "text": "Draw 2 cards.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -788,7 +788,7 @@
     "text": "Has +2/+0 while your opponent has 10 Life or less.",
     "questReward": true,
     "codexId": 100001,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -842,7 +842,7 @@
     "text": "{last_words} - Your opponent draws a card and gains {faeria|2}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -860,7 +860,7 @@
     "text": "Whenever this creature gathers faeria, a random creature you control gains +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -878,7 +878,7 @@
     "text": "{gift} - Add a <b>Campfire</b> to your hand.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -896,7 +896,7 @@
     "text": "Faeria wells are empty. {production} - Deal 1 damage to this structure.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -914,7 +914,7 @@
     "text": "{gift} - Gain +1/+1 if you control 2 lakes. Gain +0/+2 if you control 2 forests.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -932,7 +932,7 @@
     "text": "{gift} - Gain +1/+1 if you control 2 lakes. Gain +2/+0 if you control 2 mountains.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -950,7 +950,7 @@
     "text": "{gift} - Gain +1/+1 if you control 2 lakes. Gain +1/+1 if you control 2 deserts.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -968,7 +968,7 @@
     "text": "{gift} - Gain +2/+0 if you control 2 mountains. Gain +0/+2 if you control 2 forests.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -986,7 +986,7 @@
     "text": "{gift} - Gain +1/+1 if you control 2 deserts. Gain +0/+2 if you control 2 forests.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1004,7 +1004,7 @@
     "text": "{gift} - Gain +2/+0 if you control 2 mountains. Gain +1/+1 if you control 2 deserts.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1058,7 +1058,7 @@
     "text": "{production} - Gain {faeria|3}. Deal 1 damage to this structure.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1094,7 +1094,7 @@
     "text": "{gift} - Another creature's Attack becomes equal to its Life.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1112,7 +1112,7 @@
     "text": "{aquatic}, {charge|3} The first time you draw a card with a base cost of {faeria|7} or higher, gain {flying}.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1184,7 +1184,7 @@
     "text": "{gift} - Gets +2/+0 and {jump} if summoned adjacent to an enemy well.",
     "questReward": true,
     "codexId": 100010,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1202,7 +1202,7 @@
     "text": "{gift} - Transform another creature into a 5/5 <b>Mirror Phantasm</b>.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1220,7 +1220,7 @@
     "text": "{gift} - Add a <b>Triton Banquet</b> to your hand.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1238,7 +1238,7 @@
     "text": "{jump}, {haste}",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1256,7 +1256,7 @@
     "text": "Transform a creature into a 2/2 <b>Frog</b> with {jump}.",
     "questReward": true,
     "codexId": 100011,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1292,7 +1292,7 @@
     "text": "Add a copy of a creature to your hand. It costs {faeria|5} less.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1328,7 +1328,7 @@
     "text": "Add two random blue cards to your hand.",
     "questReward": true,
     "codexId": 100012,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1346,7 +1346,7 @@
     "text": "{gift} - Summon a 1/1 <b>Ruby Fish</b> (you may summon it on an ocean tile).",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1436,7 +1436,7 @@
     "text": "Draw 3 cards. All creatures drawn this way cost {faeria|2} less.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1454,7 +1454,7 @@
     "text": "Costs {faeria|1} less for each time you've harvested from an enemy well (minimum cost: {faeria|4}).",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1508,7 +1508,7 @@
     "text": "{flying} The first time you draw an event, gain +2/+2,  and {charge|2}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1516,7 +1516,7 @@
     "color": "BLUE",
     "name": "Sunken Tower",
     "type": "structure",
-    "faeriaCost": 0,
+    "faeriaCost": 1,
     "islands": 2,
     "forests": 0,
     "mountains": 0,
@@ -1526,7 +1526,7 @@
     "text": "{activate} - Move a land. Deal 1 damage to this structure.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1544,7 +1544,7 @@
     "text": "Whenever you gather faeria from an opponent's well, gain +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1562,7 +1562,7 @@
     "text": "Whenever you gather faeria, this structure gains +1 Life. {activate} - Destroy it and gain faeria equal to its Life.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1612,11 +1612,11 @@
     "mountains": 0,
     "deserts": 0,
     "attack": 1,
-    "health": 4,
+    "health": 3,
     "text": "Whenever this creature gathers faeria from an opponent's well, add a random blue card to your hand. It costs {faeria|2} less.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1634,7 +1634,7 @@
     "text": "When you draw a creature, Egg of Wonders becomes a copy of it.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1750,17 +1750,17 @@
     "color": "BLUE",
     "name": "Triton Banquet",
     "type": "event",
-    "faeriaCost": 5,
-    "islands": 2,
+    "faeriaCost": 3,
+    "islands": 1,
     "forests": 0,
     "mountains": 0,
     "deserts": 0,
     "attack": 0,
     "health": 0,
-    "text": "Give a creature +1/+1, {protection} and {jump}.",
+    "text": "Give a creature +1/+1 and {jump}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1796,25 +1796,25 @@
     "text": "At the end of your opponent's turn, set ALL players' faeria to {faeria|3}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
     "id": 127,
     "color": "BLUE",
-    "name": "Unbound Evolution",
+    "name": "Failed Experiment",
     "type": "event",
-    "faeriaCost": 2,
-    "islands": 2,
+    "faeriaCost": 0,
+    "islands": 1,
     "forests": 0,
     "mountains": 0,
     "deserts": 0,
     "attack": 0,
     "health": 0,
-    "text": "Transform a creature into a random creature that costs {faeria|2} more.",
+    "text": "The next creature you play this turn costs {faeria|3} less. It dies instantly.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1832,7 +1832,7 @@
     "text": "Gain control of a creature with 2 Attack or less.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -1850,7 +1850,7 @@
     "text": "Summon two 2/2 <b>Frogs</b> with {jump}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1876,14 +1876,14 @@
     "color": "GREEN",
     "name": "Sagami Warrior",
     "type": "creature",
-    "faeriaCost": 4,
+    "faeriaCost": 3,
     "islands": 0,
     "forests": 1,
     "mountains": 0,
     "deserts": 0,
-    "attack": 2,
-    "health": 5,
-    "text": "{combat} - Gain +1/+1.",
+    "attack": 3,
+    "health": 4,
+    "text": "{dash|2}",
     "questReward": true,
     "codexId": 101000,
     "rarity": "COMMON",
@@ -1976,7 +1976,7 @@
     "text": "You and a creature each gain +3 Life.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2012,7 +2012,7 @@
     "text": "{last_words} - Add a random green card to your hand. It costs {faeria|3} less.",
     "questReward": true,
     "codexId": 100005,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2102,7 +2102,7 @@
     "text": "The first creature you summon per turn gains +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2120,7 +2120,7 @@
     "text": "Whenever this creature is dealt damage, its Attack doubles.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2138,7 +2138,7 @@
     "text": "{last_words} - A random creature in your hand gains +5/+5.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2156,7 +2156,7 @@
     "text": "",
     "questReward": true,
     "codexId": 100007,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2246,7 +2246,7 @@
     "text": "Whenever damage would be dealt to you or a creature you control, it's dealt to this structure instead.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2282,7 +2282,7 @@
     "text": "{production} - This structure gains +1 Life. When it has 5 or more Life, destroy it and gain {faeria|10}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2318,7 +2318,7 @@
     "text": "Create two forests at random.",
     "questReward": true,
     "codexId": 100007,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2336,7 +2336,7 @@
     "text": "Costs {faeria|1} less for each special land you have (minimum cost: {faeria|6}).",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2390,7 +2390,7 @@
     "text": "{flying} The first time you draw an event, gain +1/+4, {taunt} and {charge|2}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2408,7 +2408,7 @@
     "text": "{activate} - Give a creature +1/+1. Deal 1 damage to this structure.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2426,7 +2426,7 @@
     "text": "Whenever you create a forest, gain +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2444,7 +2444,7 @@
     "text": "Whenever a friendly creature dies, a random creature in your hand gains +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2480,7 +2480,7 @@
     "text": "{jump} Whenever this creature attacks a god, add a random green creature to your hand. It costs {faeria|2} less.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2498,7 +2498,7 @@
     "text": "",
     "questReward": true,
     "codexId": 100005,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2516,7 +2516,7 @@
     "text": "{taunt}",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2552,7 +2552,7 @@
     "text": "Whenever you are dealt damage, gain {faeria|1}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2570,7 +2570,7 @@
     "text": "Draw a card and {options|Create a forest|Create a lake|Create a mountain|Create a desert} Create a forest. Create a lake. Create a mountain. Create a desert.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2585,10 +2585,10 @@
     "deserts": 0,
     "attack": 5,
     "health": 5,
-    "text": "{taunt} Gain 1 Life for each time you've been dealt damage this game.",
+    "text": "{taunt}, {dash|2} Gain 1 Life for each time you've been dealt damage this game.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2624,7 +2624,7 @@
     "text": "{options|Give a creature +2/+2.|Gain 5 life.} - Give a creature +2/+2. - Gain 5 Life.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2642,7 +2642,7 @@
     "text": "{gift} - Destroy all adjacent friendly creatures. Gain Attack AND Life equal to their combined Life.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2696,7 +2696,7 @@
     "text": "Destroy a friendly creature to gain faeria equal to its life and draw a card.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2714,7 +2714,7 @@
     "text": "Add a random green creature to your hand. It gains +6/+6.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2729,7 +2729,7 @@
     "deserts": 0,
     "attack": 6,
     "health": 6,
-    "text": "{last_words} - Return Ruunin to your hand and reduce her cost by {faeria|2}.",
+    "text": "{last_words} - Return Ruunin to your hand. She costs {faeria|2} less for each time she's died.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "LEGENDARY",
@@ -2840,7 +2840,7 @@
     "text": "{gift} - Give a structure +2 Life.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2876,7 +2876,7 @@
     "text": "Adjacent friendly creatures have +2/+0.",
     "questReward": true,
     "codexId": 100014,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -2945,7 +2945,7 @@
     "deserts": 0,
     "attack": 5,
     "health": 6,
-    "text": "When Seifer destroys a creature, he gains Attack and Life equal to the destroyed creature's original Attack and Life.",
+    "text": "{slam} When Seifer destroys a creature, he gains Attack and Life equal to the destroyed creature's original Attack and Life.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "LEGENDARY",
@@ -3002,7 +3002,7 @@
     "text": "{gift} - Gain +1/+1 if summoned adjacent to an opponent's well.",
     "questReward": true,
     "codexId": 100015,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3020,7 +3020,7 @@
     "text": "{ranged_attack} {combat} - Gain {faeria|2}.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3110,7 +3110,7 @@
     "text": "{deathtouch}",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3146,7 +3146,7 @@
     "text": "Whenever an enemy creature dies in combat, deal 1 damage to your opponent and gain {faeria|1}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3182,7 +3182,7 @@
     "text": "{gift} - Deal 4 damage to an adjacent enemy creature or structure.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3200,7 +3200,7 @@
     "text": "{gift} - Give {ranged_attack} to a friendly creature.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3218,7 +3218,7 @@
     "text": "Deal 3 damage.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3254,7 +3254,7 @@
     "text": "Costs {faeria|1} less for each enemy creature that has died in combat (minimum cost: {faeria|5}).",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3308,7 +3308,7 @@
     "text": "{flying} The first time you draw an event, gain +3/+1 and {ranged_attack}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3326,7 +3326,7 @@
     "text": "{activate} - Deal 1 damage. Deal 1 damage to this structure.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3344,7 +3344,7 @@
     "text": "Whenever an enemy creature dies, gain +2/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3362,7 +3362,7 @@
     "text": "{gift} - Deal 1 damage to ALL enemies.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3380,7 +3380,7 @@
     "text": "Gain +1/+1 whenever you summon a creature with higher Attack than Life (while in your deck or hand).",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3398,7 +3398,7 @@
     "text": "{gift} - Deal 2 damage to all adjacent enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3416,7 +3416,7 @@
     "text": "Whenever you harvest from an opponent's well, deal 1 damage to your opponent.",
     "questReward": true,
     "codexId": 100015,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3434,7 +3434,7 @@
     "text": "Deal 2 damage to a creature. If it dies, deal 2 damage to its controller.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3452,7 +3452,7 @@
     "text": "{taunt} {production} - Deal 2 damage to adjacent enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3488,7 +3488,7 @@
     "text": "Deal 3 damage to all enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3506,7 +3506,7 @@
     "text": "Whenever this creature is dealt damage, deal that much damage back to your opponent.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3524,7 +3524,7 @@
     "text": "Whenever your opponent summons a creature, deal 1 damage to this Golem.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3542,7 +3542,7 @@
     "text": "A random card in your hand costs {faeria|7} less.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3560,7 +3560,7 @@
     "text": "Choose a space. Destroy all creatures, structures and lands on, or adjacent to, that space.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3614,7 +3614,7 @@
     "text": "{haste} Whenever this creature attacks a god, draw a card.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3632,7 +3632,7 @@
     "text": "Gain {faeria|2} and draw a card. Play only if you attacked a god this turn. You may pray only once each turn.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3665,7 +3665,7 @@
     "deserts": 1,
     "attack": 3,
     "health": 3,
-    "text": "Gain +3/+0 against gods.",
+    "text": "{dash|1}. Gain +3/+0 against gods.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "COMMON",
@@ -3686,7 +3686,7 @@
     "text": "{ranged_attack} Whenever you attack a god, gain {faeria|1}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3722,7 +3722,7 @@
     "text": "Teleport a creature to a desert you control.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3740,7 +3740,7 @@
     "text": "You can summon creatures on spaces adjacent to this structure. {activate} - Move Wind Gate.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3758,7 +3758,7 @@
     "text": "{gift} - You drain 2 Life from your opponent.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3830,7 +3830,7 @@
     "text": "Destroy a creature.",
     "questReward": true,
     "codexId": 100019,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3866,7 +3866,7 @@
     "text": "{activate} - Deal 2 damage to yourself and add a 6/1 <b>Slaughtering Shadow</b> to your hand. It costs {faeria|1}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3920,7 +3920,7 @@
     "text": "Give a creature +1/+0, {flying} and {charge|2}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3956,7 +3956,7 @@
     "text": "{flying} Whenever you draw a flying creature, it gains +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4028,7 +4028,7 @@
     "text": "{flying}, {charge|5} {gift} - Move a creature.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4046,7 +4046,7 @@
     "text": "Costs {faeria|1} less for each event you've played (minimum cost: {faeria|4}).",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4100,7 +4100,7 @@
     "text": "{flying} The first time you draw an event, gain +3/+1 and {charge|3}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4118,7 +4118,7 @@
     "text": "{activate} - Give a creature {charge|5} this turn. Deal 1 damage to this structure.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4136,7 +4136,7 @@
     "text": "{flying}, {charge|3} Whenever you attack a god, gain +3/+0.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4154,7 +4154,7 @@
     "text": "{options|Move a friendly creature.| You may pay {faeria|3} more to move an enemy creature instead.} - Move a friendly creature.  - You may pay {faeria|3} more to move an enemy creature instead.",
     "questReward": true,
     "codexId": 100020,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4172,7 +4172,7 @@
     "text": "All your flying creatures have +2/+0.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4190,7 +4190,7 @@
     "text": "{charge|2} Gain +2/+2 each time you attack a god (while in your deck or hand).",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4244,7 +4244,7 @@
     "text": "{deathtouch} {gift} - You may sacrifice another creature to give this creature {protection}.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4280,7 +4280,7 @@
     "text": "{deathtouch}. You must sacrifice another creature to summon this creature.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4298,7 +4298,7 @@
     "text": "Destroy a friendly creature. Summon a 6/3 <b>Oblivion Knight</b> with {charge|3} in its place.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4316,7 +4316,7 @@
     "text": "Whenever Shaytan Vampire damages a god, you gain that much life.",
     "questReward": true,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4406,7 +4406,7 @@
     "text": "Destroy a creature with 3 Attack or less.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4442,7 +4442,7 @@
     "text": "{ranged_attack} Whenever you play an event, gain +1/+0 this turn.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -4478,7 +4478,7 @@
     "text": "{jump} {gift} - Gain Attack and Life equal to any creature's.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4496,7 +4496,7 @@
     "text": "{taunt}, {protection}",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4514,7 +4514,7 @@
     "text": "{flying} Can be summoned adjacent to a friendly creature. {gift} - Summon another <b>Twinsoul Spirit</b>.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4532,7 +4532,7 @@
     "text": "Whenever ANY of your creatures fight, gain +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4550,7 +4550,7 @@
     "text": "{flying}, {charge|3} Gain +1/+1 for each friendly creature that has died this game.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4558,17 +4558,17 @@
     "color": "HUMAN",
     "name": "Scourgeflame Specter",
     "type": "creature",
-    "faeriaCost": 6,
+    "faeriaCost": 7,
     "islands": 0,
     "forests": 0,
     "mountains": 3,
     "deserts": 3,
-    "attack": 3,
+    "attack": 2,
     "health": 5,
-    "text": "{flying}, {haste}, {charge|2} {combat} - Deal 3 damage to your opponent.",
+    "text": "{flying}, {haste}, {charge|2}. {combat} - Deal 3 damage to your opponent.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -4586,7 +4586,7 @@
     "text": "{aquatic}, {charge|3}",
     "questReward": false,
     "codexId": 106666,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": true
   },
   {
@@ -4640,7 +4640,7 @@
     "text": "{flying}  Can be summoned adjacent to a friendly creature.",
     "questReward": false,
     "codexId": 106666,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": true
   },
   {
@@ -4658,7 +4658,7 @@
     "text": "{flying}",
     "questReward": false,
     "codexId": 106666,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": true
   },
   {
@@ -4676,7 +4676,7 @@
     "text": "{haste}",
     "questReward": false,
     "codexId": 106666,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": true
   },
   {
@@ -4717,7 +4717,7 @@
   },
   {
     "id": 325,
-    "color": "HUMAN",
+    "color": "GREEN",
     "name": "Thorn Wisp",
     "type": "creature",
     "faeriaCost": 4,
@@ -4910,7 +4910,7 @@
     "text": "Deal 10 damage to ALL your enemy's pathetic creatures.",
     "questReward": false,
     "codexId": 106666,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": true
   },
   {
@@ -4946,7 +4946,7 @@
     "text": "Move a friendly creature.",
     "questReward": true,
     "codexId": 106666,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": true
   },
   {
@@ -4982,7 +4982,7 @@
     "text": "Gain 3 life and copy the top 3 cards of your opponent's deck. They cost {faeria|3} less. You cannot wish for more wishes.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -5018,7 +5018,7 @@
     "text": "Pandora opens, both players receive a <b>Treasure</b>!",
     "questReward": false,
     "codexId": 106666,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": true
   },
   {
@@ -5036,7 +5036,7 @@
     "text": "Both players receive a <b>Treasure</b>! Draw a card.",
     "questReward": false,
     "codexId": 106666,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": true
   },
   {
@@ -5054,7 +5054,7 @@
     "text": "Drain 4 life from your opponent, deal 3 damage to all enemy creatures, and draw 2 cards.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5072,7 +5072,7 @@
     "text": "Summon three 2/4 <b>Angry Prairie Yaks</b> with haste.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5090,7 +5090,7 @@
     "text": "{flying}. {gift} - Destroy all adjacent creatures, structures and lands.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5108,7 +5108,7 @@
     "text": "Take an extra turn after this one.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5126,7 +5126,7 @@
     "text": "{options|Add 3 random green cards to your hand. They cost {faeria|3} less|Add 3 random blue cards to your hand. They cost {faeria|3} less|Add 3 random red cards to your hand. They cost {faeria|3} less|Add 3 random yellow cards to your hand. They cost {faeria|3} less} Choose a color. Add 3 random cards of that color to your hand. They cost {faeria|3} less.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5144,7 +5144,7 @@
     "text": "Draw 2 cards and gain {faeria|2}.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5162,7 +5162,7 @@
     "text": "Add two copies of the last <b>Treasure</b> your opponent played to your hand.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5180,7 +5180,7 @@
     "text": "{production} - Create {faeria|1} in each well. Whenever faeria is harvested, deal 1 damage to your opponent.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5198,7 +5198,7 @@
     "text": "Give a random friendly creature +1/+1 . Six times.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5216,7 +5216,7 @@
     "text": "Give all your creatures +2/+2, wherever they are.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5234,7 +5234,7 @@
     "text": "Friendly creatures have {flying}, {jump} and +1/+0.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5252,7 +5252,7 @@
     "text": "{options|Transform a land to a forest. Gain control of it.|Transform a land to a lake. Gain control of it.|Transform a land to mountain. Gain control of it.|Transform a land to a desert. Gain control of it.} Transform a land into the color of your choice. Gain control of it.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5270,7 +5270,7 @@
     "text": "Transform a creature that attacked a god this turn into a 10/10 <b>Sky Swallower</b> with {flying}.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5288,7 +5288,7 @@
     "text": "",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5306,7 +5306,7 @@
     "text": "{gift} - You gain 6 Life. {last_words} - Deal 6 damage to your opponent.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5324,7 +5324,7 @@
     "text": "Gain control of an enemy creature.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5342,7 +5342,7 @@
     "text": "Change the base Attack and Life of all friendly creatures to 6/6.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5360,7 +5360,7 @@
     "text": "Shuffle 3 random <b>Treasures</b> into your deck.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5378,7 +5378,7 @@
     "text": "Give a creature {flying}, {charge|3} and +4/+4.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5396,7 +5396,7 @@
     "text": "{gift} - Destroy your deck.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5414,7 +5414,7 @@
     "text": "{flying}. {charge|3}.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5432,7 +5432,7 @@
     "text": "{options|Deal 3 damage.|Deal 3 damage to everything.} - Deal 3 damage. - Deal 3 damage to everything.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5450,7 +5450,7 @@
     "text": "Deal 5 damage. Shuffle the <b>Hammer</b> into your deck.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5468,7 +5468,7 @@
     "text": "{gift} - Deal 2 damage to all enemies. For each enemy destroyed, gain +2/+2.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5486,7 +5486,7 @@
     "text": "Destroy a creature. Its controller gains faeria equal to its cost and draws 2 cards.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5504,7 +5504,7 @@
     "text": "Deal 6 damage to a creature and 3 damage to all adjacent enemies.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5522,7 +5522,7 @@
     "text": "{flying}, {jump} At the end of your turn, deal 3 damage to all adjacent enemies.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5540,7 +5540,7 @@
     "text": "Destroy a creature. Summon a 6/1 <b>Slaughtering Shadow</b> in its place.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5558,7 +5558,7 @@
     "text": "{flying}, {haste}. Whenever this creature attacks a god, add a random <b>Treasure</b> to your hand.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -5576,7 +5576,7 @@
     "text": "{options|Destroy 2 unoccupied lands.|Destroy a creature with 5 Attack or less.|Gain 7 life.} - Destroy 2 unoccupied lands. - Destroy a creature with 5 Attack or less. - Gain 7 Life.",
     "questReward": false,
     "codexId": 107777,
-    "rarity": "EXCEPTIONAL",
+    "rarity": "RARE",
     "uncollectable": false
   }
 ]
