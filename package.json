@@ -10,7 +10,7 @@
     "faeria-cards": "git+https://github.com/Tidwell/faeria-cards.git",
     "mongoose": "^4.4.5",
     "passport": "^0.3.2",
-    "passport-steam": "^1.0.1",
+    "passport-steam": "1.0.7",
     "shortid": "^2.2.4"
   },
   "devDependencies": {
