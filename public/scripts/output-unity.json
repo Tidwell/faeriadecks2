@@ -47,7 +47,7 @@
     "deserts": 0,
     "attack": 3,
     "health": 2,
-    "text": "{gift} - Give a friendly creature {charge|3} this turn.",
+    "text": "{gift} - Give another friendly creature {charge|3} this turn.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "COMMON",
@@ -1091,7 +1091,7 @@
     "deserts": 0,
     "attack": 4,
     "health": 2,
-    "text": "{aquatic}, {charge|3} The first time you draw a card with a base cost of {faeria|7} or higher, gain {flying}.",
+    "text": "{aquatic}, {charge|3} The first time you draw a card with a base cost of {faeria|7} or higher, gain {flying} and +1/+1.",
     "questReward": true,
     "codexId": 101000,
     "rarity": "RARE",
@@ -1757,7 +1757,7 @@
     "deserts": 0,
     "attack": 1,
     "health": 1,
-    "text": "{gift} - Change a friendly creature's base Attack and Life to 6/6.",
+    "text": "{gift} - Change another friendly creature's base Attack and Life to 6/6.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "LEGENDARY",
@@ -1919,10 +1919,10 @@
     "deserts": 0,
     "attack": 2,
     "health": 4,
-    "text": "{gift} - Teleport a friendly creature to a land adjacent to this creature.",
+    "text": "{gift} - Teleport another friendly creature to a land adjacent to the Huntmaster.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "COMMON",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -1994,7 +1994,7 @@
     "text": "{last_words} - Add a random green card to your hand. It costs {faeria|3} less.",
     "questReward": true,
     "codexId": 100005,
-    "rarity": "RARE",
+    "rarity": "COMMON",
     "uncollectable": false
   },
   {
@@ -2038,9 +2038,9 @@
     "color": "GREEN",
     "name": "Tiki Piper",
     "type": "creature",
-    "faeriaCost": 2,
+    "faeriaCost": 3,
     "islands": 0,
-    "forests": 2,
+    "forests": 1,
     "mountains": 0,
     "deserts": 0,
     "attack": 1,
@@ -2084,7 +2084,7 @@
     "text": "The first creature you summon per turn gains +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EPIC",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2423,7 +2423,7 @@
     "deserts": 0,
     "attack": 3,
     "health": 3,
-    "text": "Whenever a friendly creature dies, a random creature in your hand gains +1/+1.",
+    "text": "Whenever another friendly creature dies, a random creature in your hand gains +1/+1.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "RARE",
@@ -2594,7 +2594,7 @@
   {
     "id": 184,
     "color": "GREEN",
-    "name": "Ruunin's Command",
+    "name": "Ruunin's Guidance",
     "type": "event",
     "faeriaCost": 2,
     "islands": 0,
@@ -2858,7 +2858,7 @@
     "text": "Adjacent friendly creatures have +2/+0.",
     "questReward": true,
     "codexId": 100014,
-    "rarity": "EPIC",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3146,7 +3146,7 @@
     "text": "{taunt} {combat} - Deal 2 damage to your opponent.",
     "questReward": true,
     "codexId": 100016,
-    "rarity": "COMMON",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3218,7 +3218,7 @@
     "text": "{ranged_attack} Whenever this creature attacks a god, deal 1 damage to all enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "COMMON",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3380,7 +3380,7 @@
     "text": "{gift} - Deal 2 damage to all adjacent enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "COMMON",
     "uncollectable": false
   },
   {
@@ -3434,7 +3434,7 @@
     "text": "{taunt} {production} - Deal 2 damage to adjacent enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "COMMON",
     "uncollectable": false
   },
   {
@@ -3524,7 +3524,7 @@
     "text": "A random card in your hand costs {faeria|7} less.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "COMMON",
     "uncollectable": false
   },
   {
@@ -3827,7 +3827,7 @@
     "deserts": 2,
     "attack": 0,
     "health": 0,
-    "text": "Draw 1 card, gain {faeria|2} and deal 3 damage to yourself.",
+    "text": "Gain {faeria|2} and deal 2 damage to yourself.",
     "questReward": true,
     "codexId": 101000,
     "rarity": "COMMON",
@@ -4258,7 +4258,7 @@
     "mountains": 0,
     "deserts": 2,
     "attack": 6,
-    "health": 5,
+    "health": 4,
     "text": "{deathtouch}. You must sacrifice another creature to summon this creature.",
     "questReward": false,
     "codexId": 101000,
@@ -4977,7 +4977,7 @@
     "forests": 0,
     "mountains": 0,
     "deserts": 0,
-    "attack": 1,
+    "attack": 2,
     "health": 3,
     "text": "{flying}, {dash|2} Can't harvest faeria.",
     "questReward": false,
@@ -5033,7 +5033,7 @@
     "deserts": 0,
     "attack": 6,
     "health": 10,
-    "text": "{dash|3} {gift} - Halve the enemy god's life, rounded up.",
+    "text": "{dash|3} {gift} - Set a god's life to 10.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "EPIC",
@@ -5054,7 +5054,7 @@
     "text": "{slam}, {jump}",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -5087,7 +5087,7 @@
     "deserts": 0,
     "attack": 0,
     "health": 0,
-    "text": "Deal 1 damage to yourself, reduce the cost of a random card in your hand by {faeria|2}. Repeat 4 times.",
+    "text": "Reduce the cost of a random card in your hand by {faeria|2} four times. Deal 4 damage to yourself.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "RARE",
@@ -5105,7 +5105,7 @@
     "deserts": 0,
     "attack": 0,
     "health": 0,
-    "text": "Deal 10 damage randomly split among enemies.",
+    "text": "Deal 9 damage randomly split among enemies.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "EPIC",
@@ -5138,10 +5138,10 @@
     "islands": 0,
     "forests": 0,
     "mountains": 0,
-    "deserts": 1,
-    "attack": 2,
+    "deserts": 2,
+    "attack": 1,
     "health": 1,
-    "text": "{flying}. {last_words} - Deal 2 damage to yourself. Summon this creature in a random space.",
+    "text": "{flying} Can't harvest faeria. {last_words} - Deal 2 damage to yourself. Summon this creature in a random space.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "EPIC",
