@@ -884,7 +884,7 @@
   {
     "id": 64,
     "color": "HUMAN",
-    "name": "Outcast Tower",
+    "name": "Imperial Drain",
     "type": "structure",
     "faeriaCost": 0,
     "islands": 0,
@@ -1109,7 +1109,7 @@
     "deserts": 0,
     "attack": 4,
     "health": 2,
-    "text": "{aquatic}, {charge|3} The first time you draw a card with a base cost of {faeria|7} or higher, gain {flying}.",
+    "text": "{aquatic}, {charge|3} The first time you draw a card with a base cost of {faeria|7} or higher, gain {flying} and +1/+1.",
     "questReward": true,
     "codexId": 101000,
     "rarity": "RARE",
@@ -1937,10 +1937,10 @@
     "deserts": 0,
     "attack": 2,
     "health": 4,
-    "text": "{gift} - Teleport another friendly creature to a land adjacent to the Huntmaster.",
+    "text": "{gift} - Teleport an adjacent friendly creature to a land you control.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "COMMON",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2012,7 +2012,7 @@
     "text": "{last_words} - Add a random green card to your hand. It costs {faeria|3} less.",
     "questReward": true,
     "codexId": 100005,
-    "rarity": "RARE",
+    "rarity": "COMMON",
     "uncollectable": false
   },
   {
@@ -2102,7 +2102,7 @@
     "text": "The first creature you summon per turn gains +1/+1.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "EPIC",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -2236,14 +2236,14 @@
     "color": "GREEN",
     "name": "Ruunin's Shrine",
     "type": "structure",
-    "faeriaCost": 1,
+    "faeriaCost": 0,
     "islands": 0,
     "forests": 2,
     "mountains": 0,
     "deserts": 0,
     "attack": 0,
     "health": 2,
-    "text": "{gift} - Gain {faeria|3}. {last_words} - Your opponent gains {faeria|3}.",
+    "text": "{gift} - Gain {faeria|2}. {last_words} - Your opponent gains {faeria|2}.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "EPIC",
@@ -2612,7 +2612,7 @@
   {
     "id": 184,
     "color": "GREEN",
-    "name": "Ruunin's Command",
+    "name": "Ruunin's Guidance",
     "type": "event",
     "faeriaCost": 2,
     "islands": 0,
@@ -2670,7 +2670,7 @@
     "type": "creature",
     "faeriaCost": 5,
     "islands": 0,
-    "forests": 3,
+    "forests": 2,
     "mountains": 0,
     "deserts": 0,
     "attack": 3,
@@ -2876,7 +2876,7 @@
     "text": "Adjacent friendly creatures have +2/+0.",
     "questReward": true,
     "codexId": 100014,
-    "rarity": "EPIC",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3016,7 +3016,7 @@
     "mountains": 1,
     "deserts": 0,
     "attack": 3,
-    "health": 4,
+    "health": 5,
     "text": "{ranged_attack}, {slam}",
     "questReward": true,
     "codexId": 101000,
@@ -3128,7 +3128,7 @@
     "text": "{gift} - Gain +2/+2 if you have another creature with higher Attack than Life.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "COMMON",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3164,7 +3164,7 @@
     "text": "{taunt} {combat} - Deal 2 damage to your opponent.",
     "questReward": true,
     "codexId": 100016,
-    "rarity": "COMMON",
+    "rarity": "RARE",
     "uncollectable": false
   },
   {
@@ -3236,7 +3236,7 @@
     "text": "{ranged_attack} Whenever this creature attacks a god, deal 1 damage to all enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "COMMON",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -3398,7 +3398,7 @@
     "text": "{gift} - Deal 2 damage to all adjacent enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "COMMON",
     "uncollectable": false
   },
   {
@@ -3452,7 +3452,7 @@
     "text": "{taunt} {production} - Deal 2 damage to adjacent enemy creatures.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "COMMON",
     "uncollectable": false
   },
   {
@@ -3542,7 +3542,7 @@
     "text": "A random card in your hand costs {faeria|7} less.",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "COMMON",
     "uncollectable": false
   },
   {
@@ -3908,7 +3908,7 @@
   {
     "id": 268,
     "color": "YELLOW",
-    "name": "Windborne",
+    "name": "Khalim's Training",
     "type": "event",
     "faeriaCost": 1,
     "islands": 0,
@@ -4295,7 +4295,7 @@
     "deserts": 2,
     "attack": 0,
     "health": 0,
-    "text": "Destroy a friendly creature. Summon a 6/3 <b>Oblivion Knight</b> with {charge|3} in its place.",
+    "text": "Destroy a friendly creature. Summon a 6/3 <b>Oblivion Rider</b> with {charge|3} in its place.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "RARE",
@@ -4358,7 +4358,7 @@
   {
     "id": 305,
     "color": "YELLOW",
-    "name": "Oblivion Knight",
+    "name": "Oblivion Rider",
     "type": "creature",
     "faeriaCost": 5,
     "islands": 0,
@@ -4418,10 +4418,10 @@
     "islands": 0,
     "forests": 0,
     "mountains": 0,
-    "deserts": 3,
+    "deserts": 2,
     "attack": 0,
     "health": 1,
-    "text": "{activate} - Destroy a friendly creature. This structure gains +4 Life. When it has 13 or more, destroy it and summon Ostregoth.",
+    "text": "When this structure has 13 Life or more, destroy it and summon <b>Ostregoth</b>. {activate} - Destroy a friendly creature, draw a card and this gains +4 Life.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "LEGENDARY",
@@ -4717,7 +4717,7 @@
   },
   {
     "id": 325,
-    "color": "HUMAN",
+    "color": "GREEN",
     "name": "Thorn Wisp",
     "type": "creature",
     "faeriaCost": 4,
@@ -4995,7 +4995,7 @@
     "forests": 0,
     "mountains": 0,
     "deserts": 0,
-    "attack": 1,
+    "attack": 2,
     "health": 3,
     "text": "{flying}, {dash|2} Can't harvest faeria.",
     "questReward": false,
@@ -5069,10 +5069,10 @@
     "deserts": 0,
     "attack": 7,
     "health": 7,
-    "text": "{slam}, {jump}",
+    "text": "{jump}, {slam}",
     "questReward": false,
     "codexId": 101000,
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "uncollectable": false
   },
   {
@@ -5152,14 +5152,14 @@
     "color": "YELLOW",
     "name": "Annoying Gnat",
     "type": "creature",
-    "faeriaCost": 3,
+    "faeriaCost": 2,
     "islands": 0,
     "forests": 0,
     "mountains": 0,
     "deserts": 2,
     "attack": 2,
     "health": 1,
-    "text": "{flying}. {last_words} - Deal 2 damage to yourself. Summon this creature in a random space.",
+    "text": "{flying} Can't harvest faeria. {last_words} - Deal 2 damage to yourself. Summon this creature in a random space.",
     "questReward": false,
     "codexId": 101000,
     "rarity": "EPIC",
