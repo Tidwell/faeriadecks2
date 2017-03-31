@@ -31,8 +31,13 @@ nohup npm start &
 
 sudo service apache2 restart
 
-##Forever Deplot
+##Forever Deploy
 
 ```bash
  $ forever start index.js
 ```
+
+##Reset all deck votes
+
+db.decks.update({}, {$set: {vote: { "positive" : [ ], "negative" : [ ] }}}, false, true);
+
