@@ -33,6 +33,9 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
       })
+      .when('/card-popup-chrome-extension', {
+        templateUrl: 'views/card-popup-chrome-extension.html',
+      })
       .when('/deckbuilder', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',

@@ -113,7 +113,7 @@
             <md-list>
                <md-list-item ng-repeat="card in main.deck | decklistOrder track by $index"
                   ng-click="main.remove(card)"
-                  style="background-image: url('/images/illustrations/{{ main.pad(card.id) }}.jpg');"
+                  style="background-image: url('/images/minicards/{{ main.pad(card.id) }}_minicard.png');"
                   class="list-card">
 
                 <p>{{ card.name }}</p> x{{ card.copies }}

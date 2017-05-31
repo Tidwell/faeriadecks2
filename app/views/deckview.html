@@ -13,12 +13,12 @@
           <md-content class="md-padding">
             <md-list>
               <md-list-item ng-repeat="card in deckView.deck.deck track by $index"
-                  style="background-image: url('/images/illustrations/{{ deckView.pad(card.id) }}.jpg');"
+                  style="background-image: url('/images/minicards/{{ deckView.pad(card.id) }}_minicard.png');"
                   class="list-card">
 
                 <p>{{ card.name }}</p>
                 x{{ card.copies }}
-                <md-tooltip md-direction="left" md-delay="50" class="deck-card-tooltip">
+                <md-tooltip md-direction="right" md-delay="50" class="deck-card-tooltip">
                   <img alt="{{ card.name }}" ng-src="/images/card-renders/{{ deckView.pad(card.id) }}.png" class="card-img"  />
                 </md-tooltip>
               </md-list-item>
