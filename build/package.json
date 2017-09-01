@@ -7,7 +7,7 @@
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "express-spa": "0.0.2",
-    "faeria-cards": "git+https://github.com/Tidwell/faeria-cards.git#1.7.0",
+    "faeria-cards": "git+https://github.com/Tidwell/faeria-cards.git#1.8.0",
     "mongoose": "^4.4.5",
     "passport": "^0.3.2",
     "passport-steam": "1.0.7",
