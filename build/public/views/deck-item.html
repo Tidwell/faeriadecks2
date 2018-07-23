@@ -1,1 +1,44 @@
-<md-card layout="row" class="decklisting-item" layout-align="space-between center"> <div layout="row" layout-align="center center"> <div class="metavote {{myVote}}"> <i class="fa fa-arrow-up up" ng-click="vote('upvote', deck.url)"></i><br> {{deck.metaVotes.upvotes - deck.metaVotes.downvotes}}<br> <i class="fa fa-arrow-down down" ng-click="vote('downvote', deck.url)"></i> </div> <md-card-title> <md-card-title-text layout="column" layout-align="space-between start"> <span class="md-headline"> <a href="/{{deck.url}}">{{ deck.name || 'Untitled Deck'}}</a> </span> <span class="author-info-container"> <md-button class="md-fab md-mini" href="/decks/by/{{deck.author.steamId}}" aria-label="Decks by {{deck.author.name}}" ng-show="showUserImg && deck.author.name"> <img ng-src="{{deck.author.image}}"> </md-button> <div layout-xs="column"> <strong ng-show="deck.author.name">By <a href="/decks/by/{{deck.author.steamId}}">{{deck.author.name}}</a></strong> <span am-time-ago="deck.created"></span> </div> </span> <span class="disqus-comment-count" data-disqus-url="http://www.faeriadecks.com/{{deck.url}}"></span> </md-card-title-text> </md-card-title> </div> <md-card-actions layout="column" layout-align="center end"> <div layout="row" layout-wrap layout-align="end center"> <span ng-repeat="color in getColors(deck)" class="color {{color | lowercase}}">{{maxColors(color,deck)}}</span> </div> <md-button class="md-primary md-raised" href="/deckbuilder/{{deck.url}}" ng-show="user.user.steamid && user.user.steamid == deck.author.steamId"> <i class="fa fa-pencil"></i> Edit </md-button> <md-button aria-label="Fork" class="md-raised md-primary" href="/deckbuilder/{{deck.url}}" ng-show="showCopy && (!user.user.steamid || user.user.steamid != deck.author.steamId)"> <i class="fa fa-code-fork"></i> Create Copy </md-button> </md-card-actions> </md-card>
+<md-card layout="row" class="decklisting-item" layout-align="space-between center">
+	<div layout="row" layout-align="center center">
+		<div class="metavote {{myVote}}">
+			<i class="fa fa-arrow-up up" ng-click="vote('upvote', deck.url)"></i><br />
+				{{deck.metaVotes.upvotes - deck.metaVotes.downvotes}}<br />
+			<i class="fa fa-arrow-down down" ng-click="vote('downvote', deck.url)"></i>
+		</div>
+		<md-card-title>
+			<md-card-title-text layout="column" layout-align="space-between start">
+				<span class="md-headline">
+					<a href="/{{deck.url}}">{{ deck.name || 'Untitled Deck'}}</a>
+				</span>
+				<span class="author-info-container">
+			      <md-button class="md-fab md-mini" href="/decks/by/{{deck.author.steamId}}"
+			      	aria-label="Decks by {{deck.author.name}}"
+			      	ng-show="showUserImg && deck.author.name">
+			      	<img ng-src="{{deck.author.image}}" />
+			      </md-button>
+			      <div layout-xs="column">
+				      <strong ng-show="deck.author.name">By <a href="/decks/by/{{deck.author.steamId}}">{{deck.author.name}}</a></strong> <span am-time-ago="deck.created"></span>
+				  </div>
+			    </span>
+				<span class="disqus-comment-count" data-disqus-url="http://www.faeriadecks.com/{{deck.url}}"></span>
+			</md-card-title-text>
+		</md-card-title>
+	</div>
+
+	<md-card-actions layout="column" layout-align="center end">
+	    <div layout="row" layout-wrap layout-align="end center">
+			<span ng-repeat="color in getColors(deck)" class="color {{color | lowercase}}">{{maxColors(color,deck)}}</span>
+		</div>	
+
+	    <md-button class="md-primary md-raised" href="/deckbuilder/{{deck.url}}"
+			 ng-show="user.user.steamid && user.user.steamid == deck.author.steamId">
+			<i class="fa fa-pencil"></i> Edit
+		</md-button>
+
+		<md-button aria-label="Fork" class="md-raised md-primary" href="/deckbuilder/{{deck.url}}"
+			ng-show="showCopy && (!user.user.steamid || user.user.steamid != deck.author.steamId)">
+			<i class="fa fa-code-fork"></i> Create Copy
+	    </md-button>
+
+	</md-card-actions>
+</md-card>
