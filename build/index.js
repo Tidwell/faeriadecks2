@@ -161,6 +161,8 @@ router.get('/decks', function(req, res) {
 	});
 });
 
+router.get('/cardsearch/:card', require('./src/card-search.js'));
+
 // more routes for our API will happen here
 
 //configure the auth routes
