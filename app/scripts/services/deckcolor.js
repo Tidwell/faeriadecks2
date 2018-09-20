@@ -20,7 +20,7 @@ angular.module('faeriadecks2App')
 			var colors = [];
 			deck.deck.forEach(function(c){
 				var card = Cards.getById(c.id);
-				if (!card) { console.log('find', c.id); return []; }
+				if (!card) { return []; }
 
 				for (var color in typeMap) {
 					if (typeMap.hasOwnProperty(color)) {
@@ -38,7 +38,7 @@ angular.module('faeriadecks2App')
 			var curMax = 0;
 			deck.deck.forEach(function(c){
 				var card = Cards.getById(c.id);
-				if (!card) { console.log('find', c.id); return 0; }
+				if (!card) { return 0; }
 
 				if (typeMap[color] && card[typeMap[color]] > curMax) {
 					curMax = card[typeMap[color]];

@@ -14,7 +14,7 @@ angular.module('faeriadecks2App')
 			var cards = 0;
 			deck.forEach(function(c) {
 				var fullCard = Cards.getById(c.id);
-				if (!fullCard) { console.log('find', c.id); return; }
+				if (!fullCard) { return; }
 				if (fullCard[stat]) {
 					amnt += fullCard[stat] * c.copies;
 					cards += c.copies;
@@ -34,7 +34,7 @@ angular.module('faeriadecks2App')
 			var cards = 0;
 			deck.forEach(function(c) {
 				var fullCard = Cards.getById(c.id);
-				if (!fullCard) { console.log('find', c.id); return; }
+				if (!fullCard) { return; }
 				if (!conditionalStat || fullCard[conditionalStat] === value) {
 					amnt += fullCard[stat] * c.copies;
 					cards += c.copies;
@@ -51,7 +51,7 @@ angular.module('faeriadecks2App')
 			deck.forEach(function(c) {
 
 				var fullCard = Cards.getById(c.id);
-				if (!fullCard) { console.log('find', c.id); return; }
+				if (!fullCard) { return; }
 				if (!value || fullCard[stat] === value) {
 					cards += c.copies;
 				}
@@ -66,7 +66,7 @@ angular.module('faeriadecks2App')
 			var highest = 0;
 			deck.forEach(function(c) {
 				var fullCard = Cards.getById(c.id);
-				if (!fullCard) { console.log('find', c.id); return; }
+				if (!fullCard) { return; }
 				if (fullCard[stat] > highest) {
 					highest = fullCard[stat];
 				}
